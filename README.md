@@ -1,4 +1,4 @@
-##Lerom
+## Lerom
 
-##Aftor
+## Aftor
 <p>Ibrokhim Ergashov</p>
