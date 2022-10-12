@@ -1,4 +1,3 @@
 ## Lerom
 
-## Aftor
-<p>Ibrokhim Ergashov</p>
+## Aftor <p>Ibrokhim Ergashov</p>
