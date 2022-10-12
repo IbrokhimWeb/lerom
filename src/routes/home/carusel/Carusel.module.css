@@ -1,0 +1,89 @@
+
+.korzinka{
+    top: 120px;
+    right: 0;
+    cursor: pointer;
+    position: absolute;
+    font-size: 3rem;
+    color: var(--white);
+    box-sizing: content-box;
+    padding: 15px 15px 5px 30px;
+    border: 1px solid var(--white);
+    border-right: 0;
+    box-shadow: 0px 4px 38px var(--dark-blue);
+    border-radius: 120px 0 0 120px;
+    background-color: var(--dark-blue);
+}
+
+.carusel {
+    width: 100%;
+    height: 627px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    padding: 0 50px;
+    background-image: url(../../../assets/bg1.png);
+}
+
+.carusel__icons {
+    color: var(--white);
+    padding: 10px;
+    border: 1px solid var(--white);
+    box-sizing: content-box;
+    border-radius: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.shorts__about {
+    color: var(--white);
+    width: 70%;
+    gap: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.shorts__about > h1{
+    font-size: 3rem;
+}
+
+.shorts__about > p{
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.activate {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 70px;
+}
+
+.production,
+.working,
+.officially {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.production h2 > span,
+.working h2 > span{
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+
+.activate__icons {
+    box-sizing: content-box;
+    font-size: 2rem;
+    border-radius: 50%;
+    padding: 20px;
+    color: var(--dark-blue);
+    background-color: var(--white);
+}
