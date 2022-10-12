@@ -1,0 +1,68 @@
+.navbar{
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid var(--black);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+}
+
+.pages{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__select{
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--brown);
+    font-weight: 700;
+}
+
+.nav__select > option{
+    color: var(--dark-blue);
+}
+
+.pages > ul{
+    gap: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    color: black;
+}
+
+.Link{
+    color: var(--black);
+}
+
+.Link:hover{
+    color: var(--dark-blue);
+}
+
+.nav__input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav__input > input{
+    width: 330px;
+    height: 35px;
+    outline: none;
+    padding: 5px 20px;
+    border-radius: 47px ;
+    border: 2px solid var(--dark-blue);
+}
+
+.nav__input > input::placeholder{
+    color: var(--dark-blue);
+}
+
+.imput__icons{
+    color: var(--brown);
+    margin:0 10px 0 -30px;
+}

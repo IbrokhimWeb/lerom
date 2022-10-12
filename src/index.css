@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+:root{
+    --white: white;
+    --black: black;
+    --yellow: yellow;
+    --green: green;
+    --blue: blue;
+    --dark-blue: #004583;
+    --aqua: aqua;
+    --red: red;
+    --brown: brown;
+    --pink: pink;
+}
