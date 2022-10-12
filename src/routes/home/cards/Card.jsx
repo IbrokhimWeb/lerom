@@ -7,40 +7,49 @@ import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs"
 
 
 function Card({ index, data }) {
-    const { title, description, cost, price, img } = data;
     return (
         <>
-            <section className={s.card} key={index}>
-                {
-                    index == 2 || index == 3 ? (
-                        <>
-                            <div className={s.card}>
-                                <div className={s.card__item}>
-                                    <h1>{title}</h1>
-                                    <p>{description}</p>
-                                    <p>Товары под заказ в наличии: {price}</p>
-                                    <p>Цены от: {cost}</p>
-                                    <BsArrowRightShort className={s.card_icons}/>
-                                </div>
-                                <img src={img} alt="photo" />
-                            </div>
-                        </>
-                    ) : (
-                        <>
-                            <div className={s.card}>
-                                <img src={img} alt="photo" />
-                                <div className={s.card__item}>
-                                    <h1>{title}</h1>
-                                    <p>{description}</p>
-                                    <p>Товары под заказ в наличии: {price}</p>
-                                    <p>Цены от: {cost}</p>
-                                    <BsArrowLeftShort className={s.card_icons}/>
+            {
+                data.length > 1
+                    ? <>
+                        <div className={s.card__item}>
+
+                            <div className={s.top}>
+                                <img className={s.img} src={data[0].img} alt="photo" />
+                                <div className={s.content}>
+                                    <h1>{data[0].title}</h1>
+                                    <p>{data[0].description}</p>
+                                    <p>Товары под заказ в наличии: {data[0].price}</p>
+                                    <p>Цены от:{data[0].cost}</p>
+                                    <BsArrowLeftShort className={s.card_icons} />
                                 </div>
                             </div>
-                        </>
-                    )
-                }
-            </section>
+
+                            <div className={s.bottm}>
+                                <div className={s.content}>
+                                    <h1>{data[1].title}</h1>
+                                    <p>{data[1].description}</p>
+                                    <p>Товары под заказ в наличии: {data[1].price}</p>
+                                    <p>Цены от:{data[1].cost}</p>
+                                    <BsArrowRightShort className={s.card_icons} />
+                                </div>
+                                <img src={data[1].img} alt="photo" />
+                            </div>
+
+                        </div>
+                    </> : <>
+                        {/* <div className={s.one}>
+                            <img className={s.img2} src={data[0].img} alt="photo" />
+                            <div className={s.content2}>
+                                <h1>{data[0].title}</h1>
+                                <p>{data[0].description}</p>
+                                <p>Товары под заказ в наличии: {data[0].price}</p>
+                                <p>Цены от:{data[0].cost}</p>
+                                <BsArrowLeftShort className={s.card_icons} />
+                            </div>
+                        </div> */}
+                    </>
+            }
         </>
     );
 }
