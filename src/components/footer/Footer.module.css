@@ -1,0 +1,84 @@
+.footer__header {
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__header p {
+    color: gray;
+}
+
+.creator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.creator>h1 {
+    color: var(--blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reverse__icon {
+    color: var(--red);
+    padding: 0 10px;
+    box-sizing: content-box;
+}
+
+.creator>h1>span {
+    color: var(--black);
+}
+
+.footer__start {
+    display: flex;
+    padding: 40px 0;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.bloks {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bloks > h1{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.bloks>a,
+.bloks>p{
+    font-size: 1rem;
+    color: var(--black);
+    font-weight: 400;
+}
+
+.link{
+    gap: 25px;
+    display: flex;
+    margin-top: 5px;
+    font-weight: 700;
+    flex-direction: column;
+}
+
+.link > a{
+    color: var(--dark-blue);
+
+}
+
+.prophecy{
+    gap: 20px;
+    display: flex;
+    margin-top: 40px;
+}
+
+.footer__end {
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1.3rem;
+    color: gray;
+}

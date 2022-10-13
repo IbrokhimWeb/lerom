@@ -1,6 +1,10 @@
+import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-
+import axios from "axios"
 import s from "./App.module.css";
+
+// Import Data
+import  { api }  from "./api/axios";
 
 // Import components
 import Header from "./components/header/Header";
@@ -10,10 +14,15 @@ import About from "./routes/about/About";
 import Footer from "./components/footer/Footer";
 
 function App() {
+    const [loading, setLoading] = useState(false);
+    const [data, setData] = useState(null);
+
+    // console.log(api());
+
     return (
         <>
             <Router>
-                <Header/>
+                <Header />
                 <Navbar />
                 <Switch>
                     <Route exact path="/" component={Home} />

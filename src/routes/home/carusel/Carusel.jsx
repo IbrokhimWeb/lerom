@@ -9,7 +9,7 @@ import { AiOutlineStar } from "react-icons/ai";
 import { FaCartPlus } from "react-icons/fa";
 
 function Carusel(props) {
-    return (
+    return ( 
         <>
             <div className={s.carusel}>
                     <div className={s.korzinka}>

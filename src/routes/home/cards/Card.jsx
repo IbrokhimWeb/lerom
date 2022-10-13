@@ -12,7 +12,7 @@ function Card({ index, data }) {
             {
                 data.length > 1
                     ? <>
-                        <div className={s.card__item}>
+                        <div className={s.card__item} key={index}>
 
                             <div className={s.top}>
                                 <img className={s.img} src={data[0].img} alt="photo" />
@@ -37,7 +37,8 @@ function Card({ index, data }) {
                             </div>
 
                         </div>
-                    </> : <>
+                    </> 
+                    : <>
                         {/* <div className={s.one}>
                             <img className={s.img2} src={data[0].img} alt="photo" />
                             <div className={s.content2}>
