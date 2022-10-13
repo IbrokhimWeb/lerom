@@ -1,0 +1,35 @@
+.container{
+    width: 100%;
+    padding: 0 100px;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product__img{
+    width: 680px;
+    height: 670px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product__img > img{
+    width: 100%;
+    /* background-size: cover; */
+}
+
+.filter{
+    width: 680px;
+    height: 670px;
+}
+
+.axsia{
+    min-width: 200px;
+    display: flex;
+    justify-content: center;
+}
+

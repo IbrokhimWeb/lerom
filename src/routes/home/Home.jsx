@@ -13,6 +13,7 @@ import Video from "./video/Video";
 //  Import components
 import Carusel from './carusel/Carusel';
 import Card from './cards/Card';
+import Footer from "../../components/footer/Footer";
 
 
 
@@ -38,6 +39,7 @@ function Home(props) {
                     <h2>открыть раздел новости <AiOutlineArrowDown/> </h2>
                     <p>лером</p>
                 </div>
+                <Footer />
             </div>
         </>
     );

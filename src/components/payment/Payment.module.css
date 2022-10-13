@@ -1,0 +1,29 @@
+.payment{
+    width: 350px;
+    height: 500px;
+    background-size: cover;
+    background-image: url(../../assets/axia.png);
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding:80px 0  30px 0;
+}
+
+.payment > h1{
+    font-size: 3rem;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+.payment > h1 > span{
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+.button{
+    color: var(--dark-blues);
+    background-color: var(--white);
+    padding: 20px 100px;
+}

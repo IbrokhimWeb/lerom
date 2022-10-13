@@ -6,15 +6,11 @@ import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import { TbMaximize } from "react-icons/tb";
 import { HiOutlineUser } from "react-icons/hi";
 import { AiOutlineStar } from "react-icons/ai";
-import { FaCartPlus } from "react-icons/fa";
 
 function Carusel(props) {
     return ( 
         <>
             <div className={s.carusel}>
-                    <div className={s.korzinka}>
-                        <FaCartPlus />
-                    </div>
                     <BiChevronLeft className={s.carusel__icons} />
                     <div className={s.shorts__about}>
                         <h1>Производим мебель <br />с 1997 года</h1>
