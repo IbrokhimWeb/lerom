@@ -7,8 +7,13 @@ import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 // import assets
 import product from "../../assets/card2.png";
 
+// Import Data
+import { color_selection } from "../../static/static"
+
+
 // Import Components
 import Payment from '../../components/payment/Payment';
+import Radio from '../../components/radio/Radio';
 
 function Product(props) {
     return (
@@ -18,40 +23,38 @@ function Product(props) {
                     <div className={s.product__img}>
                         <img src={product} alt="photo" />
                     </div>
+
+
+
                     <div className={s.filter}>
-                        <p>{"Главная >> Гостиные >> Коллекции"}</p>
-                        <h1>{"название модели"}</h1>
-                        <p>Артикул: {34235234523}</p>
+                        <p>{"Главная >> Гостиные >>"}<span>{"Коллекции"}</span></p>
+                        <div className={s.nazvania}>
+                            <h1>{"название модели"}</h1>
+                            <p>Артикул: {34235234523}</p>
+                        </div>
                         <div className={s.size}>
                             <div className={s.razmer}>
-                                <p>Размеры</p>
+                                <h2>Размеры</h2>
                                 <p>{"В 2264  Ш 540  Г 352"}</p>
                             </div>
                             <div className={s.ves}>
-                                <p>Вес</p>
+                                <h2>Вес</h2>
                                 <p>234234кг</p>
                             </div>
                         </div>
                         <div className={s.colors}>
                             <p>цвет</p>
-                            <div>
-                                <input type="checkbox" />
-                                <input type="checkbox" />
-                                <input type="checkbox" />
-                                <input type="checkbox" />
-                                <input type="checkbox" />
-                                <input type="checkbox" />
-                                <input type="checkbox" />
-                                <input type="checkbox" />
-                            </div>
+                            {
+                                color_selection.map(( e, i )=> <Radio nmae="radio" key={i} data={e}/>)
+                            }
                         </div>
                         <div className={s.calc}>
-                            <p>Цена:</p>
-                            <h1>{"62 284"} ₽</h1>
+                            <h2>Цена: <span>{"62 284"} ₽</span></h2>
+
                             <div className={s.inc__dec}>
-                                <AiOutlineMinus className={s.inc__dec__icons}/>
-                                <p>{1}</p>
-                                <AiOutlinePlus className={s.inc__dec__icons}/>
+                                <AiOutlineMinus className={s.inc__dec__icons} />
+                                <p> {1} </p>
+                                <AiOutlinePlus className={s.inc__dec__icons} />
                             </div>
                         </div>
                         <button className={s.button}>Купить</button>

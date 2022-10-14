@@ -1,0 +1,48 @@
+
+.radio-img>img {
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+
+
+.form li{
+    position: relative;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/**/
+.checkbox__img {
+    width: 40px;
+    /* margin-top: -100px; */
+}
+
+.form input[type="radio"] {
+    display: none;
+    position: absolute;
+}
+
+.form label {
+    position: absolute;
+    padding: 20px;
+    margin: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+:checked+label:before {
+    position: absolute;
+    content: "✓";
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgb(254, 254, 254);
+    transform: scale(1);
+}

@@ -1,15 +1,15 @@
-.container{
+.container {
     width: 100%;
     padding: 0 100px;
 }
 
-.header{
+.header {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.product__img{
+.product__img {
     width: 680px;
     height: 670px;
     display: flex;
@@ -17,43 +17,135 @@
     align-items: center;
 }
 
-.product__img > img{
+.product__img>img {
     width: 100%;
 }
 
-.filter{
+.filter {
     width: 680px;
     height: 670px;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
-.size{
+.filter>p>span {
+    font-weight: 700;
+}
+
+.nazvania {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nazvania>h1 {
+    font-size: 1.7rem;
+    text-transform: uppercase;
+}
+
+.nazvania>p {
+    color: var(--dark-blue);
+}
+
+.size {
     display: flex;
     gap: 50px;
 }
 
-.colors{
-    display: flex;
-    gap: 50px;
+.size h2 {
+    color: var(--dark-blue);
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
 }
 
-.inc__dec{
+.colors {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.colors>p {
+    color: var(--dark-blue);
+}
+
+.colors>form {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.calc {
+    gap: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.calc>h2 {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.calc>h2>span {
+    font-size: 2.5rem;
+}
+
+.inc__dec {
     gap: 10px;
     font-size: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid var(--dark-blue);
-    padding: 10px 20px;
-
+    border: 1px solid var(--black);
+    padding: 10px;
 }
 
-.calc{
+.inc__dec>p {
+    min-width: 30px;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-.inc__dec__icons{
-    border: 1px solid var(--dark-blue);
+.inc__dec__icons {
+    border: 1px solid var(--black);
     border-radius: 50%;
     font-size: 1rem;
     box-sizing: content-box;
@@ -61,7 +153,7 @@
     cursor: pointer;
 }
 
-.button{
+.button {
     box-sizing: content-box;
     font-size: 1.5rem;
     padding: 20px 100px;
@@ -76,9 +168,8 @@
 
 
 
-.axsia{
+.axsia {
     min-width: 200px;
     display: flex;
     justify-content: center;
 }
-
