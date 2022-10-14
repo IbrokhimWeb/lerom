@@ -44,9 +44,11 @@ function Product(props) {
                         </div>
                         <div className={s.colors}>
                             <p>цвет</p>
-                            {
-                                color_selection.map(( e, i )=> <Radio nmae="radio" key={i} data={e}/>)
-                            }
+                            <form className={s.form}>
+                                {
+                                    color_selection.map((e, i) => <Radio nmae="radio" key={i} data={e} />)
+                                }
+                            </form>
                         </div>
                         <div className={s.calc}>
                             <h2>Цена: <span>{"62 284"} ₽</span></h2>
