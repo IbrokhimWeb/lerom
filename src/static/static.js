@@ -10,6 +10,72 @@ import color3 from "../assets/color3.png";
 import color4 from "../assets/color4.png";
 import color5 from "../assets/color5.png";
 
+import tovar1 from "../assets/tovar1.png"
+
+
+export const tovar = [
+    {
+        id: 1,
+        img: tovar1,
+        model: "АН-2801",
+        v: 1462,
+        sh: 360,
+        g: 352,
+        svet: [color1, color2, color3, color4, color5],
+        sena: '6 284'
+    },
+    {
+        id: 2,
+        img: tovar1,
+        model: "АН-2801",
+        v: 1462,
+        sh: 360,
+        g: 352,
+        svet: [color1, color2, color3, color4, color5],
+        sena: '6 284'
+    },
+    {
+        id: 3,
+        img: tovar1,
+        model: "АН-2801",
+        v: 1462,
+        sh: 360,
+        g: 352,
+        svet: [color1, color2, color3, color4, color5],
+        sena: '6 284'
+    },
+    {
+        id: 4,
+        img: tovar1,
+        model: "АН-2801",
+        v: 1462,
+        sh: 360,
+        g: 352,
+        svet: [color1, color2, color3, color4, color5],
+        sena: '6 284'
+    },
+    {
+        id: 5,
+        img: tovar1,
+        model: "АН-2801",
+        v: 1462,
+        sh: 360,
+        g: 352,
+        svet: [color1, color2, color3, color4, color5],
+        sena: '6 284'
+    },
+    {
+        id: 6,
+        img: tovar1,
+        model: "АН-2801",
+        v: 1462,
+        sh: 360,
+        g: 352,
+        svet: [color1, color2, color3, color4, color5],
+        sena: '6 284'
+    },
+
+];
 
 export const color_selection = [
     {
