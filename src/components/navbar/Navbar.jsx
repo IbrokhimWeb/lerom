@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import s from "./Navbar.module.css";
 import { Link } from "react-router-dom";
 
@@ -8,6 +8,7 @@ import { BiSearchAlt } from "react-icons/bi"
 
 
 function Navbar(props) {
+    const [ togle, setTogle] = useState(true);
     return (
         <>
             <nav className={s.navbar}>
