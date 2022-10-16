@@ -2,7 +2,7 @@ import React from 'react';
 import s from "./Tovar.module.css";
 
 function Tovar(props) {
-    console.log(props);
+    // console.log(props);
     const { id, img, model, v, sh, g, svet, sena } = props.data;
     return (
         <>

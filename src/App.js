@@ -12,6 +12,7 @@ import Navbar from "./components/navbar/Navbar";
 import Home from "./routes/home/Home";
 import About from "./routes/about/About";
 import Product from "./routes/product/Product";
+import NewProducts from "./routes/newProducts/NewProducts";
 import Footer from "./components/footer/Footer";
 
 // Import React icons
@@ -35,6 +36,7 @@ function App() {
                     <Route exact path="/" component={Home} />
                     <Route exact path="/about" component={About} />
                     <Route exact path="/product" component={Product} />
+                    <Route exact path="/new" component={NewProducts} />
                 </Switch>
             </Router>
         </>
