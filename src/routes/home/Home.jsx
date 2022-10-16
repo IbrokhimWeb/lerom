@@ -11,8 +11,8 @@ import { AiOutlineArrowDown } from "react-icons/ai";
 import Video from "./video/Video";
 
 //  Import components
-import Carusel from './carusel/Carusel';
-import Card from './cards/Card';
+import Carusel from '../../components/carusel/Carusel';
+import Card from '../../components/cards/Card';
 import Footer from "../../components/footer/Footer";
 
 

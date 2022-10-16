@@ -2,12 +2,14 @@ import React from 'react';
 import s from "./Select.module.css";
 
 function Select(props) {
-    const { data } = props;
+    // console.log(props.data[0]);
     return (
-        <>
-            <select className={s.select}>
-                {data.map((e, i) => <option className={s.option} key={i}>{e}</option>)}
-            </select>
+        <>  
+            <section className={s.select}>
+                <select className={s.select__app}>
+                    {props?.data.map((e, i) => <option key={i}> {e} </option>)}
+                </select>
+            </section>
         </>
     );
 }

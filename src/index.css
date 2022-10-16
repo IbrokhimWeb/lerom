@@ -18,6 +18,15 @@ li{
     list-style-type: none;
 }
 
+body{
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.152);
+    padding: 10px 0;
+    position: relative;
+    max-width: 1900px;
+    min-height: 100vh;
+    margin: 0 auto 50px;
+}
+
 :root{
     --white: white;
     --black: black;
