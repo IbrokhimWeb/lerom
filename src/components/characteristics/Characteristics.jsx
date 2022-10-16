@@ -16,8 +16,7 @@ function Characteristics(props) {
                     page
                         ? <>
                             <div className={s.pages}>
-                            <span className={s.marginL}/>
-
+                                <span className={s.marginL} />
                                 <button className={s.button1} onClick={() => setPage(true)}>Технические характеристики</button>
                                 <span className={s.transform} onClick={() => setPage(false)} />
                                 <button className={s.button2} onClick={() => setPage(false)}>Состав композиции</button>
@@ -53,7 +52,7 @@ function Characteristics(props) {
                         :
                         <>
                             <div className={s.pages}>
-                                <span className={s.marginL}/>
+                                <span className={s.marginL} />
                                 <span className={s.transform__revers} onClick={() => setPage(true)} />
                                 <button className={s.button2} onClick={() => setPage(true)}>Технические характеристики</button>
                                 <span className={s.transform__revers} onClick={() => setPage(true)} />

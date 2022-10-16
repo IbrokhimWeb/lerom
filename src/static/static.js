@@ -10,7 +10,7 @@ import color3 from "../assets/color3.png";
 import color4 from "../assets/color4.png";
 import color5 from "../assets/color5.png";
 
-import tovar1 from "../assets/tovar1.png"
+import tovar1 from "../assets/tovar1.png";
 
 export const select = [
     ["Новинки", "Новинки"],

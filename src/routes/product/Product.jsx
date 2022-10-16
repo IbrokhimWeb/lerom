@@ -3,7 +3,7 @@ import s from "./Product.module.css";
 
 // Import React Icons
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
-
+ 
 // import assets
 import product from "../../assets/card2.png";
 
@@ -15,7 +15,7 @@ import { color_selection, tovar } from "../../static/static";
 import Payment from '../../components/payment/Payment';
 import Radio from '../../components/radio/Radio';
 import Characteristics from '../../components/characteristics/Characteristics';
-import Tovar from "../../components/tovar/Tovar"
+import Tovar from "../../components/tovar/Tovar";
 
 function Product(props) {
     const [value, setValue] = useState(1);
