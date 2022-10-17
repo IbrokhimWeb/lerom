@@ -15,7 +15,7 @@ import Compositions from "../../components/compositions/Compositions";
 
 function NewProducts(props) {
 
-    const [ togle, setTogle] = useState(false);
+    const [togle, setTogle] = useState(false);
 
     return (
         <>
@@ -30,18 +30,18 @@ function NewProducts(props) {
                     </div>
                 </div>
 
-
-
-
-
-
                 <div className={s.right}>
-                <p>{"Главная >> Гостиные >>"}<span> Коллекции</span></p>
-                {   togle ?
-                    card_posts.map((e, i) =>  <Card key={i} index={i} data={e} /> )
-                    : 
-                    <Compositions/>
-                }
+                    <p>{"Главная >> Гостиные >>"}<span> Коллекции</span></p>
+                    {
+                        !togle ?
+                            <div className={s.shaddow}>
+                                {card_posts.map((e, i) => <Card key={i} index={i} data={e} />)}
+                            </div>
+                            :
+                            <div className={s.block}>
+                                <Compositions />
+                            </div>
+                    }
                 </div>
             </section>
         </>
