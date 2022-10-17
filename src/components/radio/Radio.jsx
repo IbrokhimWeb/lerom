@@ -8,7 +8,7 @@ function Radio(props) {
         <>
             <li>
                 <input type="radio" name={name} id={id} />
-                <label for={id}></label>
+                <label htmlFor={id}></label>
                 <img className={s.checkbox__img} src={img} />
             </li>
         </>

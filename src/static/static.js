@@ -34,7 +34,7 @@ export const product = [
         sh: 360,
         g: 352,
         svet: [color1, color2, color3, color4, color5, color1, color2, color3],
-        sena: '6 284'
+        sena: 6284
     },
     {
         id: 2,
@@ -44,7 +44,7 @@ export const product = [
         sh: 360,
         g: 352,
         svet: [color1, color2, color3, color4, color5, color1, color2, color3],
-        sena: '6 284'
+        sena: 6284
     },
     {
         id: 3,
@@ -54,7 +54,7 @@ export const product = [
         sh: 360,
         g: 352,
         svet: [color1, color2, color3, color4, color5, color1, color2, color3],
-        sena: '6 284'
+        sena: 6284
     },
     {
         id: 4,
@@ -64,7 +64,7 @@ export const product = [
         sh: 360,
         g: 352,
         svet: [color1, color2, color3, color4, color5, color1, color2, color3],
-        sena: '6 284'
+        sena: 6284
     },
     {
         id: 5,
@@ -74,7 +74,7 @@ export const product = [
         sh: 360,
         g: 352,
         svet: [color1, color2, color3, color4, color5, color1, color2, color3],
-        sena: '6 284'
+        sena: 6284
     },
     {
         id: 6,
@@ -84,7 +84,7 @@ export const product = [
         sh: 360,
         g: 352,
         svet: [color1, color2, color3, color4, color5, color1, color2, color3],
-        sena: '6 284'
+        sena: 6284
     },
 
 ];
@@ -100,7 +100,7 @@ export const tovar = [
         sh: 360,
         g: 352,
         svet: [color1, color2, color3, color4, color5],
-        sena: '6 284'
+        sena: 6284
     },
     {
         id: 2,
@@ -110,7 +110,7 @@ export const tovar = [
         sh: 360,
         g: 352,
         svet: [color1, color2, color3, color4, color5],
-        sena: '6 284'
+        sena: 6284
     },
     {
         id: 3,
@@ -120,7 +120,7 @@ export const tovar = [
         sh: 360,
         g: 352,
         svet: [color1, color2, color3, color4, color5],
-        sena: '6 284'
+        sena: 6284
     },
     {
         id: 4,
@@ -130,7 +130,7 @@ export const tovar = [
         sh: 360,
         g: 352,
         svet: [color1, color2, color3, color4, color5],
-        sena: '6 284'
+        sena: 6284
     },
     {
         id: 5,
@@ -140,7 +140,7 @@ export const tovar = [
         sh: 360,
         g: 352,
         svet: [color1, color2, color3, color4, color5],
-        sena: '6 284'
+        sena: 6284
     },
     {
         id: 6,
@@ -150,7 +150,7 @@ export const tovar = [
         sh: 360,
         g: 352,
         svet: [color1, color2, color3, color4, color5],
-        sena: '6 284'
+        sena: 6284
     },
 
 ];
