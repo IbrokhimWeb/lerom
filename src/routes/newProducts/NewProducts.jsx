@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import s from "./NewProducts.module.css";
 
 // Import react icons
@@ -10,9 +10,13 @@ import { select, card_posts } from "../../static/static";
 // Import components
 import Select from "../../components/select/Select";
 import Payment from '../../components/payment/Payment';
-import Card from "../../components/cards/Card"
+import Card from "../../components/cards/Card";
+import Compositions from "../../components/compositions/Compositions";
 
 function NewProducts(props) {
+
+    const [ togle, setTogle] = useState(false);
+
     return (
         <>
             <section className={s.section}>
@@ -33,7 +37,11 @@ function NewProducts(props) {
 
                 <div className={s.right}>
                 <p>{"Главная >> Гостиные >>"}<span> Коллекции</span></p>
-                {card_posts.map((e, i) =>  <Card key={i} index={i} data={e} /> )}
+                {   togle ?
+                    card_posts.map((e, i) =>  <Card key={i} index={i} data={e} /> )
+                    : 
+                    <Compositions/>
+                }
                 </div>
             </section>
         </>

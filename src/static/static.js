@@ -12,6 +12,8 @@ import color5 from "../assets/color5.png";
 
 import tovar1 from "../assets/tovar1.png";
 
+import product1 from "../assets/product1.png"
+
 export const select = [
     ["Новинки", "Новинки"],
     ["Гостинные", "Гостинные"],
@@ -20,6 +22,71 @@ export const select = [
     ["Детские", "Детские"],
     ["Кровати", "Кровати"],
     ["Матрасы", "Матрасы"]
+];
+
+
+export const product = [
+    {
+        id: 1,
+        img: product1,
+        model: "АН-2801",
+        v: 1462,
+        sh: 360,
+        g: 352,
+        svet: [color1, color2, color3, color4, color5, color1, color2, color3],
+        sena: '6 284'
+    },
+    {
+        id: 2,
+        img: product1,
+        model: "АН-2801",
+        v: 1462,
+        sh: 360,
+        g: 352,
+        svet: [color1, color2, color3, color4, color5, color1, color2, color3],
+        sena: '6 284'
+    },
+    {
+        id: 3,
+        img: product1,
+        model: "АН-2801",
+        v: 1462,
+        sh: 360,
+        g: 352,
+        svet: [color1, color2, color3, color4, color5, color1, color2, color3],
+        sena: '6 284'
+    },
+    {
+        id: 4,
+        img: product1,
+        model: "АН-2801",
+        v: 1462,
+        sh: 360,
+        g: 352,
+        svet: [color1, color2, color3, color4, color5, color1, color2, color3],
+        sena: '6 284'
+    },
+    {
+        id: 5,
+        img: product1,
+        model: "АН-2801",
+        v: 1462,
+        sh: 360,
+        g: 352,
+        svet: [color1, color2, color3, color4, color5, color1, color2, color3],
+        sena: '6 284'
+    },
+    {
+        id: 6,
+        img: product1,
+        model: "АН-2801",
+        v: 1462,
+        sh: 360,
+        g: 352,
+        svet: [color1, color2, color3, color4, color5, color1, color2, color3],
+        sena: '6 284'
+    },
+
 ];
 
 
