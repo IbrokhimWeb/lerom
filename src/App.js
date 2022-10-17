@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import axios from "axios"
+import {
+    BrowserRouter,
+    Routes,
+    Route,
+    Link,
+} from "react-router-dom";
+// import axios from "axios"
 import s from "./App.module.css";
 
 // Import Data
@@ -14,6 +19,7 @@ import About from "./routes/about/About";
 import Product from "./routes/product/Product";
 import NewProducts from "./routes/newProducts/NewProducts";
 import Footer from "./components/footer/Footer";
+import Basket from "./routes/basket/Basket"
 
 // Import React icons
 import { FaCartPlus } from "react-icons/fa";
@@ -26,19 +32,18 @@ function App() {
 
     return (
         <>
-            <Router>
-                <div className={s.korzinka}>
-                    <FaCartPlus />
-                </div>
-                <Header />
-                <Navbar />
-                <Switch>
-                    <Route exact path="/" component={Home} />
-                    <Route exact path="/about" component={About} />
-                    <Route exact path="/product" component={Product} />
-                    <Route exact path="/new" component={NewProducts} />
-                </Switch>
-            </Router>
+            <Link className={s.korzinka} to="/basket">
+                <FaCartPlus />
+            </Link>
+            <Header />
+            <Navbar />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/product" element={<Product />} />
+                <Route path="/new" element={<NewProducts />} />
+                <Route path="/basket" element={<Basket />} />
+            </Routes>
         </>
     );
 }
