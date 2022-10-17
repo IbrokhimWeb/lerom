@@ -8,7 +8,7 @@ import { card_posts } from "../../static/static";
 import { AiOutlineArrowDown } from "react-icons/ai";
 
 // Import assets 
-import Video from "./video/Video";
+import Video from "../../components/video/Video";
 
 //  Import components
 import Carusel from '../../components/carusel/Carusel';
