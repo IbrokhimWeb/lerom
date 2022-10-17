@@ -19,7 +19,9 @@ import About from "./routes/about/About";
 import Product from "./routes/product/Product";
 import NewProducts from "./routes/newProducts/NewProducts";
 import Footer from "./components/footer/Footer";
-import Basket from "./routes/basket/Basket"
+import Basket from "./routes/basket/Basket";
+import Order from "./routes/order/Order";
+
 
 // Import React icons
 import { FaCartPlus } from "react-icons/fa";
@@ -43,6 +45,7 @@ function App() {
                 <Route path="/product" element={<Product />} />
                 <Route path="/new" element={<NewProducts />} />
                 <Route path="/basket" element={<Basket />} />
+                <Route path="/order" element={<Order />} />
             </Routes>
         </>
     );

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import s from "./Basket.module.css";
 
 // Import data
@@ -16,7 +17,7 @@ function Basket(props) {
                 {tovar?.map((e, i) => <BasketCard key={i} data={e} />)}
                 <div className={s.submit}>
                     <h1>Итого: <span>{"434 658 ₽ "}</span></h1>
-                    <button>Оформить заказ</button>
+                    <Link className={s.button} to="/order">Оформить заказ</Link>
                 </div>
             </section>
 

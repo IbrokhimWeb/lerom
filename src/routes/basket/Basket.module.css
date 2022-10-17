@@ -16,13 +16,16 @@
     margin-bottom: 20px;
 }
 
-.submit > button{
-    font-size: 1rem;
-    font-weight: 700;
+.submit > .button{
     width: 330px;
     height: 60px;
-    color: var(--white);
     border: none;
+    display: flex;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--white);
+    align-items: center;
+    justify-content: center;
     background-color: var(--dark-blue);
 }
 

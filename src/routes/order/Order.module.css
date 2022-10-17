@@ -1,0 +1,56 @@
+.section{
+    width: 100%;
+    padding: 60px 100px;
+}
+
+.section> h1{
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.information{
+    width: 100%;
+    padding: 30px ;
+    border-radius: 10px;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.152);
+}
+
+.information > form {
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.information > form > textarea {
+    width: 100%;
+    resize: none;
+    font-size: 1.1rem;
+    padding: 20px;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    background-color: #F3F3F3;
+}
+
+.information > h1{
+    margin-bottom: 10px;
+}
+
+.information__input{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+} 
+
+.information__input> input{
+    width: 32%;
+    height: 70px;
+    padding: 0 20px;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    font-size: 1.1rem;
+    background-color: #F3F3F3;
+}
