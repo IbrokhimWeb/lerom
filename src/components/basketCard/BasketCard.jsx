@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import s from "./BasketCard.module.css";
+import { v4 as uuidv4 } from 'uuid';
 
 // Import React Icons
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
@@ -12,6 +13,7 @@ import { color_selection } from "../../static/static";
 import Radio from "../radio/Radio";
 
 function BasketCard(props) {
+    let uuid = uuidv4();
     const { id, img, model, v, sh, g, svet, sena } = props.data;
     const [value, setValue] = useState(1)
     return (
@@ -26,7 +28,7 @@ function BasketCard(props) {
                     </div>
                 </div>
                 <div className={s.colors}>
-                    <p>Цвет: дуб</p>
+                    <p>Цвет: <span>дуб</span></p>
                     <div className={s.radio}>
                         {color_selection?.map((e, i) => <Radio key={i} data={e} />)}
                     </div>
@@ -46,7 +48,6 @@ function BasketCard(props) {
                 </div>
             </section>
             <hr />
-
         </>
     );
 }

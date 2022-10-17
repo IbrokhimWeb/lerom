@@ -2,12 +2,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 0;
 }
 
 .about{
+    gap: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.about > img{
+    /* width: 120px;
+    height: 160px; */
+    border: 1px solid var(--gray);
 }
 
 .model{
@@ -17,6 +25,7 @@
 }
 
 .model > p{
+    font-size: 1.2rem;
     font-weight: 700;
     color: var(--gray);
 }
@@ -26,8 +35,23 @@
 }
 
 .model > button{
+    margin-top: 30px;
     width: 150px;
     height: 35px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.colors > p{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--gray);
+    margin-bottom: 10px;
+}
+
+.colors > p > span{
+    color: var(--black);
 }
 
 .radio{
@@ -35,6 +59,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.calc{
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 80px;
 }
 
 .inc__dec {

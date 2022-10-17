@@ -2,4 +2,28 @@
     padding: 50px 100px;
 }
 
+.submit{
+    width: 100%;
+    display: flex;
+    margin-top: 100px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.submit > h1{
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+}
+
+.submit > button{
+    font-size: 1rem;
+    font-weight: 700;
+    width: 330px;
+    height: 60px;
+    color: var(--white);
+    border: none;
+    background-color: var(--dark-blue);
+}
+
 

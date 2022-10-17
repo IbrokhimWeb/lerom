@@ -33,7 +33,7 @@ function NewProducts(props) {
                 <div className={s.right}>
                     <p>{"Главная >> Гостиные >>"}<span> Коллекции</span></p>
                     {
-                        !togle ?
+                        togle ?
                             <div className={s.shaddow}>
                                 {card_posts.map((e, i) => <Card key={i} index={i} data={e} />)}
                             </div>
