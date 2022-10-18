@@ -31,11 +31,11 @@ function App() {
     const [api, setApi] = useState([]);
     const [loading, setLoading] = useState(false);
 
-    useEffect(() => {
-        axios.get(`http://10.10.1.160:2005/api`)
-            .then(res => setApi(res))
-            .catch(err => console.log(`Nimadir xato ketdi\n ${err}`))
-    }, []);
+    // useEffect(() => {
+    //     axios.get(`http://10.10.1.160:2005/api`)
+    //         .then(res => setApi(res))
+    //         .catch(err => console.log(`Nimadir xato ketdi\n ${err}`))
+    // }, []);
 
     // console.log(?.tovar);
     return (

@@ -91,18 +91,8 @@
         width: 230px;
     }
 }
-
 @media (max-width: 1290px) {
-    .nav__input>input {
+    .navbar{
         display: none;
-    }
-
-    .imput__icons {
-        cursor: pointer;
-        border: 1px solid var(--brown);
-        box-sizing: content-box;
-        font-size: 2rem;
-        padding: 5px;
-        border-radius: 50%;
     }
 }

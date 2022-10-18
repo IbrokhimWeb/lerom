@@ -16,7 +16,7 @@ import { ApiContex } from '../../contex/ApiContext';
 
 function NewProducts(props) {
     const api = useContext(ApiContex);
-    console.log(api?.product);
+    // console.log(api?.product);
 
     const [togle, setTogle] = useState(false);
 

@@ -9,10 +9,6 @@
 
 }
 
-/* .left__menu{
-
-} */
-
 .working__time {
     display: flex;
     justify-content: center;
@@ -48,14 +44,6 @@
     border-color:  var(--blue);
 }
 
-/* .brand{
-
-} */
-
-/* .header__logo{
-
-} */
-
 .contacts {
     display: flex;
     flex-direction: column;
@@ -85,4 +73,10 @@
 .russian__conversation {
     display: flex;
     justify-content: center;
+}
+
+@media (max-width: 1290px) {
+    .header{
+        display: none;
+    }
 }

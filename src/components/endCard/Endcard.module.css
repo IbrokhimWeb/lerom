@@ -1,0 +1,39 @@
+.card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.card > img{
+    width: 63%;
+}
+
+.content{
+    gap: 20px;
+    display: flex;
+    padding: 60px;
+    flex-direction: column;
+}
+
+.card_icons{
+    box-sizing: content-box;
+    padding: 10px;
+    color: var(--dark-blue);
+    font-size: 2rem;
+    border: 1px solid var(--dark-blue);
+    border-radius: 50%;
+}
+
+
+@media (max-width: 1900px) {
+    .card {
+        width: 79%;
+    }
+
+    .content{
+        padding:0 60px;
+    }
+}
+
+
+

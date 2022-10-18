@@ -29,4 +29,20 @@
     background-color: var(--dark-blue);
 }
 
+.pustoy{
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pustoy h1{
+    color: var(--red);
+    font-size: 3.5rem;
+}
+
+.pustoy h1:hover{
+    color: var(--dark-blue);
+}
+
 

@@ -12,7 +12,7 @@ import { ApiContex } from '../../contex/ApiContext';
 
 function Compositions(props) {
     const api = useContext(ApiContex);
-    console.log(api?.tovar);
+    // console.log(api?.tovar);
     
     const [page, setPage] = useState(true)
     return (

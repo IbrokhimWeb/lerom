@@ -5,13 +5,14 @@ import s from "./Endcard.module.css"
 import { BsArrowLeftShort } from "react-icons/bs"
 
 
-function EndCard({ index, data}) {
-    const { title, description, cost, price, img } = data;
+function EndCard({ data }) {
+    const { id, title, description, cost, price, img } = data[0];
     return (
+        id == 5 &&
         <>
-            <div key={index} className={s.card2}>
+            <div className={s.card}>
                 <img src={img} alt="photo" />
-                <div className={s.card__item2}>
+                <div className={s.content}>
                     <h1>{title}</h1>
                     <p>{description}</p>
                     <p>Товары под заказ в наличии: {price}</p>
