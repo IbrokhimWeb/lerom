@@ -16,6 +16,10 @@
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.152);
 }
 
+.section > img{
+    width: 300px;
+}
+
 .section:hover{
     z-index: 1;
     transform: scale(1.2);

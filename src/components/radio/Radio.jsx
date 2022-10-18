@@ -7,8 +7,8 @@ function Radio(props) {
     return (
         <>
             <li>
-                <input type="radio" name={name} id={id} />
-                <label htmlFor={id}></label>
+                <input className={s.input} type="radio" name={name} id={id} />
+                <label className={s.label} htmlFor={id}></label>
                 <img className={s.checkbox__img} src={img} />
             </li>
         </>

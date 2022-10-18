@@ -1,12 +1,15 @@
 import React from 'react';
 import s from "./Product.module.css";
 
+// Import data
+import { product } from "../../static/static";
+
 function Product(props) {
-    const { id, img, model, v, sh, g, svet, sena } = props.data;
+    const { id, img, model, v, sh, svet, g, sena } = props.data;
     return (
         <>
             <section className={s.section}>
-                <img src={img} alt="Tovar" />
+                <img src={`http://10.10.1.160:2005${img}`} alt="Tovar" />
                 <div className={s.actions}>
                     <div>
                         <h1>{model}</h1>
@@ -15,7 +18,7 @@ function Product(props) {
                     <div>
                         <p>Цвет: дуб</p>
                         <div className={s.images}>
-                            {svet.map((e, i) => <img className={s.img__item} key={i} src={e} />)}
+                            {product[0]?.svet?.map((e, i) => <img className={s.img__item} key={i} src={e} />)}
                         </div>
                     </div>
                     <h1>{sena} ₽</h1>

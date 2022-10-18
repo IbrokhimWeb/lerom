@@ -13,8 +13,7 @@
 }
 
 .about > img{
-    /* width: 120px;
-    height: 160px; */
+    width: 120px;
     border: 1px solid var(--gray);
 }
 

@@ -1,11 +1,13 @@
 .section{
+    gap: 40px;
     width: 100%;
     padding: 60px 100px;
+    display: flex;
+    flex-direction: column;
 }
 
 .section> h1{
     text-transform: uppercase;
-    margin-bottom: 30px;
 }
 
 .information{
@@ -24,6 +26,7 @@
 
 .information > form > textarea {
     width: 100%;
+    height: 200px;
     resize: none;
     font-size: 1.1rem;
     padding: 20px;
@@ -45,7 +48,6 @@
 } 
 
 .information__input> input{
-    width: 32%;
     height: 70px;
     padding: 0 20px;
     border: none;
@@ -53,4 +55,132 @@
     border-radius: 2px;
     font-size: 1.1rem;
     background-color: #F3F3F3;
+}
+
+.information__adres{
+    gap: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.information__adres__left{
+    width: 32%;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.152);
+}
+
+.information__adres__left > h1{
+    margin-bottom: 20px;
+}
+
+.information__adres__left > form{
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.information__adres__left > form > div{
+    gap: 20px;
+    display: flex;
+    font-size: 1.2rem;
+    align-items: center;
+}
+
+.information__adres__left input {
+    width: 2rem;
+    height: 2rem;
+    accent-color: var(--red);
+}
+
+.information__adres__right{
+    width: 100%;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.152);
+    
+}
+
+.information__adres__right > h1{
+    margin-bottom: 20px;
+}
+
+.information__adres__right > form{
+    gap: 30px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.information__adres__right input {
+    height: 70px;
+    padding: 0 20px;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    font-size: 1.1rem;
+    background-color: #F3F3F3;
+}
+
+.information__oplata{
+    gap: 50px;
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.information__oplata__left{
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.152);
+}
+
+.information__oplata__left > h1{
+    margin-bottom: 20px;
+}
+
+.information__oplata__left > form{
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.information__oplata__left > form > div{
+    gap: 20px;
+    display: flex;
+    font-size: 1.2rem;
+    align-items: center;
+}
+
+.information__oplata__left input {
+    width: 2rem;
+    height: 2rem;
+    accent-color: var(--red);
+}
+
+.lift{
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.152);
+}
+
+.lift > h1{
+    margin-bottom: 20px;
+}
+
+.lift > form{
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.lift > form > div{
+    gap: 20px;
+    display: flex;
+    font-size: 1.2rem;
+    align-items: center;
+}
+
+.lift input {
+    width: 2rem;
+    height: 2rem;
+    accent-color: var(--red);
 }

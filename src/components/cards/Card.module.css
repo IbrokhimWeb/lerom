@@ -7,15 +7,14 @@
     border-radius: 50%;
 }
 
-.top,
-.bottm {
+.card {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.top > img,
-.bottm > img{
+.card > img{
     width: 475px;
 }
 

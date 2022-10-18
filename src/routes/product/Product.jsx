@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import s from "./Product.module.css";
 
 // Import React Icons
@@ -16,8 +16,10 @@ import Payment from '../../components/payment/Payment';
 import Radio from '../../components/radio/Radio';
 import Characteristics from '../../components/characteristics/Characteristics';
 import Tovar from "../../components/tovar/Tovar";
+import { ApiContex } from '../../contex/ApiContext';
 
 function Product(props) {
+    const api = useContext(ApiContex);
     const [value, setValue] = useState(1);
 
 

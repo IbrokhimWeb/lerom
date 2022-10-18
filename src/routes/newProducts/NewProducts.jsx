@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import s from "./NewProducts.module.css";
 
 // Import react icons
@@ -12,8 +12,11 @@ import Select from "../../components/select/Select";
 import Payment from '../../components/payment/Payment';
 import Card from "../../components/cards/Card";
 import Compositions from "../../components/compositions/Compositions";
+import { ApiContex } from '../../contex/ApiContext';
 
 function NewProducts(props) {
+    const api = useContext(ApiContex);
+    console.log(api?.product);
 
     const [togle, setTogle] = useState(false);
 
@@ -33,9 +36,9 @@ function NewProducts(props) {
                 <div className={s.right}>
                     <p>{"Главная >> Гостиные >>"}<span> Коллекции</span></p>
                     {
-                        togle ?
+                        !togle ?
                             <div className={s.shaddow}>
-                                {card_posts.map((e, i) => <Card key={i} index={i} data={e} />)}
+                                {api?.card_posts?.map((e, i) => <Card key={i} index={i} data={e} />)}
                             </div>
                             :
                             <div className={s.block}>

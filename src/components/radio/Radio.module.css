@@ -20,12 +20,12 @@ li{
     box-shadow: 0 6px 10px rgb(0 0 0 / 50%);
 }
 
-input[type="radio"] {
+.input {
     display: none;
     position: absolute;
 }
 
-label {
+.label {
     position: absolute;
     padding: 20px;
     margin: 10px;
@@ -35,7 +35,7 @@ label {
     align-items: center;
 }
 
-:checked+label:before {
+:checked+.label:before {
     width: 20px;
     height: 20px;
     content: "✓";

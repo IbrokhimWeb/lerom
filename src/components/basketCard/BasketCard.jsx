@@ -20,7 +20,7 @@ function BasketCard(props) {
         <>
             <section className={s.section}>
                 <div className={s.about}>
-                    <img src={img} alt="tovar" />
+                    <img src={`http://10.10.1.160:2005${img}`} alt="tovar" />
                     <div className={s.model}>
                         <h1>{model}</h1>
                         <p>Pазмер: <span>{`в ${v} ш ${sh} г ${g} `}</span></p>

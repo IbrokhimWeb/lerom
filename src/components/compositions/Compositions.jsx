@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import s from "./Compositions.module.css";
 
 
@@ -8,8 +8,12 @@ import { tovar, product } from "../../static/static";
 // Import Components
 import Tovar from '../tovar/Tovar';
 import Product from '../product/Product';
+import { ApiContex } from '../../contex/ApiContext';
 
 function Compositions(props) {
+    const api = useContext(ApiContex);
+    console.log(api?.tovar);
+    
     const [page, setPage] = useState(true)
     return (
         <>
@@ -26,7 +30,7 @@ function Compositions(props) {
                         </div>
                         <div className={s.block}>
                             <div className={s.product__items}>
-                                {product.map((e, i) => <Product key={i} data={e} />)}
+                                {api?.product?.map((e, i) => <Product key={i} data={e} />)}
                             </div>
                         </div>
                     </>
@@ -41,7 +45,7 @@ function Compositions(props) {
                         </div>
                         <div className={s.block}>
                             <div className={s.tovar__items}>
-                                {tovar.map((e, i) => <Tovar key={i} data={e} />)}
+                                {api?.tovar.map((e, i) => <Tovar key={i} data={e} />)}
                             </div>
                         </div>
                     </>
