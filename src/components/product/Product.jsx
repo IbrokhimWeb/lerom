@@ -7,6 +7,7 @@ import { product } from "../../static/static";
 
 function Product(props) {
     const { id, img, model, v, sh, svet, g, sena } = props.data;
+    console.log(svet);
     return (
         <>
             <section className={s.section}>
@@ -19,9 +20,9 @@ function Product(props) {
                     <div>
                         <p>Цвет: дуб</p>
                         <div className={s.images}>
-                            {/* {
-                                svet?.map((e, i) => <img className={s.img__item} key={i} src={e} />)
-                            } */}
+                            {
+                                svet?.map((e, i) => <img className={s.img__item} key={i} src={e.img} />)
+                            }
                         </div>
                     </div>
                     <h1>{sena} ₽</h1>

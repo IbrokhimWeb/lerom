@@ -10,7 +10,7 @@ function Tovar(props) {
     return (
         <>
             <section className={s.section}>
-                <img src={`http://10.10.1.160:2005${img}`} alt="Tovar" />
+                <img src={img} alt="Tovar" /> {/**`http://10.10.1.160:2005${img}` */}
                 <div className={s.actions}>
                     <div>
                         <h1>{model}</h1>
@@ -19,7 +19,7 @@ function Tovar(props) {
                     <div>
                         <p>Цвет: дуб</p>
                         <div className={s.images}>
-                            {tovar[0]?.svet.map((e, i) => <img className={s.img__item} key={i} src={e} />)}
+                            {svet.map((e, i) => <img className={s.img__item} key={i} src={e.img} />)}
                         </div>
                     </div>
                     <h1>{sena} ₽</h1>

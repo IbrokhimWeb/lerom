@@ -15,7 +15,10 @@ import about2 from "../assets/about2.png";
 import about3 from "../assets/about3.png";
 
 import tovar1 from "../assets/tovar1.png";
-import product1 from "../assets/product1.png"
+import product1 from "../assets/product1.png";
+
+import { v4 as uuidv4 } from 'uuid';
+let id = uuidv4();
 
 export const select = [
     ["Новинки"],
@@ -27,10 +30,9 @@ export const select = [
     ["Матрасы"]
 ];
 
-
 export const product = [
     {
-        id: 1,
+        id,
         img: product1,
         model: "АН-2801",
         sales_code: 34235234523,
@@ -39,20 +41,20 @@ export const product = [
         sh: 360,
         g: 352,
         svet: [
-            { id: 1, name: "color", img: color1 },
-            { id: 2, name: "color", img: color2 },
-            { id: 3, name: "color", img: color3 },
-            { id: 4, name: "color", img: color4 },
-            { id: 5, name: "color", img: color5 },
-            { id: 6, name: "color", img: color1 },
-            { id: 7, name: "color", img: color2 },
-            { id: 8, name: "color", img: color3 },
+            { id, name: "color", img: color1 },
+            { id, name: "color", img: color2 },
+            { id, name: "color", img: color3 },
+            { id, name: "color", img: color4 },
+            { id, name: "color", img: color5 },
+            { id, name: "color", img: color1 },
+            { id, name: "color", img: color2 },
+            { id, name: "color", img: color3 },
 
         ],
         sena: 6284
     },
     {
-        id: 2,
+        id,
         img: product1,
         model: "АН-2801",
         sales_code: 34235234523,
@@ -61,20 +63,20 @@ export const product = [
         sh: 360,
         g: 352,
         svet: [
-            { id: 1, name: "color", img: color1 },
-            { id: 2, name: "color", img: color2 },
-            { id: 3, name: "color", img: color3 },
-            { id: 4, name: "color", img: color4 },
-            { id: 5, name: "color", img: color5 },
-            { id: 6, name: "color", img: color1 },
-            { id: 7, name: "color", img: color2 },
-            { id: 8, name: "color", img: color3 },
+            { id, name: "color", img: color1 },
+            { id, name: "color", img: color2 },
+            { id, name: "color", img: color3 },
+            { id, name: "color", img: color4 },
+            { id, name: "color", img: color5 },
+            { id, name: "color", img: color1 },
+            { id, name: "color", img: color2 },
+            { id, name: "color", img: color3 },
 
         ],
         sena: 6284
     },
     {
-        id: 3,
+        id,
         img: product1,
         model: "АН-2801",
         sales_code: 34235234523,
@@ -83,150 +85,109 @@ export const product = [
         sh: 360,
         g: 352,
         svet: [
-            { id: 1, name: "color", img: color1 },
-            { id: 2, name: "color", img: color2 },
-            { id: 3, name: "color", img: color3 },
-            { id: 4, name: "color", img: color4 },
-            { id: 5, name: "color", img: color5 },
-            { id: 6, name: "color", img: color1 },
-            { id: 7, name: "color", img: color2 },
-            { id: 8, name: "color", img: color3 },
+            { id, name: "color", img: color1 },
+            { id, name: "color", img: color2 },
+            { id, name: "color", img: color3 },
+            { id, name: "color", img: color4 },
+            { id, name: "color", img: color5 },
+            { id, name: "color", img: color1 },
+            { id, name: "color", img: color2 },
+            { id, name: "color", img: color3 },
 
         ],
         sena: 6284
     },
-    {
-        id: 4,
-        img: product1,
-        model: "АН-2801",
-        sales_code: 34235234523,
-        weight: 234234,
-        v: 1462,
-        sh: 360,
-        g: 352,
-        svet: [
-            { id: 1, name: "color", img: color1 },
-            { id: 2, name: "color", img: color2 },
-            { id: 3, name: "color", img: color3 },
-            { id: 4, name: "color", img: color4 },
-            { id: 5, name: "color", img: color5 },
-            { id: 6, name: "color", img: color1 },
-            { id: 7, name: "color", img: color2 },
-            { id: 8, name: "color", img: color3 },
-        ],
-        sena: 6284
-    },
-    {
-        id: 5,
-        img: product1,
-        model: "АН-2801",
-        sales_code: 34235234523,
-        weight: 234234,
-        v: 1462,
-        sh: 360,
-        g: 352,
-        svet: [
-            { id: 1, name: "color", img: color1 },
-            { id: 2, name: "color", img: color2 },
-            { id: 3, name: "color", img: color3 },
-            { id: 4, name: "color", img: color4 },
-            { id: 5, name: "color", img: color5 },
-            { id: 6, name: "color", img: color1 },
-            { id: 7, name: "color", img: color2 },
-            { id: 8, name: "color", img: color3 },
-
-        ],
-        sena: 6284
-    },
-    {
-        id: 6,
-        img: product1,
-        model: "АН-2801",
-        sales_code: 34235234523,
-        weight: 234234,
-        v: 1462,
-        sh: 360,
-        g: 352,
-        svet: [
-            { id: 1, name: "color", img: color1 },
-            { id: 2, name: "color", img: color2 },
-            { id: 3, name: "color", img: color3 },
-            { id: 4, name: "color", img: color4 },
-            { id: 5, name: "color", img: color5 },
-            { id: 6, name: "color", img: color1 },
-            { id: 7, name: "color", img: color2 },
-            { id: 8, name: "color", img: color3 },
-
-        ],
-        sena: 6284
-    },
-
 ];
-
-
 
 export const tovar = [
     {
-        id: 1,
+        id,
         img: tovar1,
         model: "АН-2801",
+        sales_code: 34235234523,
+        weight: 234234,
         v: 1462,
         sh: 360,
         g: 352,
-        svet: [color1, color2, color3, color4, color5],
-        sena: 6284
-    },
-    {
-        id: 2,
-        img: tovar1,
-        model: "АН-2801",
-        v: 1462,
-        sh: 360,
-        g: 352,
-        svet: [color1, color2, color3, color4, color5],
-        sena: 6284
-    },
-    {
-        id: 3,
-        img: tovar1,
-        model: "АН-2801",
-        v: 1462,
-        sh: 360,
-        g: 352,
-        svet: [color1, color2, color3, color4, color5],
-        sena: 6284
-    },
-    {
-        id: 4,
-        img: tovar1,
-        model: "АН-2801",
-        v: 1462,
-        sh: 360,
-        g: 352,
-        svet: [color1, color2, color3, color4, color5],
-        sena: 6284
-    },
-    {
-        id: 5,
-        img: tovar1,
-        model: "АН-2801",
-        v: 1462,
-        sh: 360,
-        g: 352,
-        svet: [color1, color2, color3, color4, color5],
-        sena: 6284
-    },
-    {
-        id: 6,
-        img: tovar1,
-        model: "АН-2801",
-        v: 1462,
-        sh: 360,
-        g: 352,
-        svet: [color1, color2, color3, color4, color5],
-        sena: 6284
-    },
+        svet: [
+            { id, name: "color", img: color1 },
+            { id, name: "color", img: color2 },
+            { id, name: "color", img: color3 },
+            { id, name: "color", img: color4 },
+            { id, name: "color", img: color5 },
+            { id, name: "color", img: color1 },
+            { id, name: "color", img: color2 },
+            { id, name: "color", img: color3 },
 
+        ],
+        sena: 6284
+    },
+    {
+        id,
+        img: tovar1,
+        model: "АН-2801",
+        sales_code: 34235234523,
+        weight: 234234,
+        v: 1462,
+        sh: 360,
+        g: 352,
+        svet: [
+            { id, name: "color", img: color1 },
+            { id, name: "color", img: color2 },
+            { id, name: "color", img: color3 },
+            { id, name: "color", img: color4 },
+            { id, name: "color", img: color5 },
+            { id, name: "color", img: color1 },
+            { id, name: "color", img: color2 },
+            { id, name: "color", img: color3 },
+
+        ],
+        sena: 6284
+    },
+    {
+        id,
+        img: tovar1,
+        model: "АН-2801",
+        sales_code: 34235234523,
+        weight: 234234,
+        v: 1462,
+        sh: 360,
+        g: 352,
+        svet: [
+            { id, name: "color", img: color1 },
+            { id, name: "color", img: color2 },
+            { id, name: "color", img: color3 },
+            { id, name: "color", img: color4 },
+            { id, name: "color", img: color5 },
+            { id, name: "color", img: color1 },
+            { id, name: "color", img: color2 },
+            { id, name: "color", img: color3 },
+
+        ],
+        sena: 6284
+    },
+    {
+        id,
+        img: tovar1,
+        model: "АН-2801",
+        sales_code: 34235234523,
+        weight: 234234,
+        v: 1462,
+        sh: 360,
+        g: 352,
+        svet: [
+            { id, name: "color", img: color1 },
+            { id, name: "color", img: color2 },
+            { id, name: "color", img: color3 },
+            { id, name: "color", img: color4 },
+            { id, name: "color", img: color5 },
+            { id, name: "color", img: color1 },
+            { id, name: "color", img: color2 },
+            { id, name: "color", img: color3 },
+
+        ],
+        sena: 6284
+    },
 ];
 
 export const card_posts = [

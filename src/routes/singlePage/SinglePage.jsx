@@ -24,7 +24,7 @@ function SinglePage(props) {
 
     const { id } = useParams();
     const allProducts = [...product];
-    const singleProduct = allProducts.find(e => e.id === +id);
+    const singleProduct = allProducts.find(e => e.id === id);
     // console.log(singleProduct);
     const { img, model, sales_code, weight, v, sh, g, svet, sena } = singleProduct;
 
