@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import s from "./Product.module.css";
 
-// Import data
-import { product } from "../../static/static";
+
+
 
 function Product(props) {
     const { id, img, model, v, sh, svet, g, sena } = props.data;
-    console.log(svet);
+
     return (
         <>
             <section className={s.section}>
