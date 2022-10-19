@@ -1,6 +1,9 @@
 import React, { useContext, useState } from 'react';
 import { ApiContex } from '../../contex/ApiContext';
-import s from "./Order.module.css"
+import s from "./Order.module.css";
+
+// Import React icons
+import { MdOutlineError } from "react-icons/md";
 
 function Order(props) {
     const api = useContext(ApiContex);
@@ -28,16 +31,16 @@ function Order(props) {
                         <h1>Информация о доставке:</h1>
                         <form>
                             <div>
-                                <input type="radio" name="information" id={1} />
-                                <label htmlFor={1}>Доставка по Москве и Московской области до подъезда</label>
+                                <input type="radio" name="information" />
+                                <label>Доставка по Москве и Московской <br /> области до подъезда</label>
                             </div>
                             <div>
-                                <input type="radio" name="information" id={1} />
-                                <label htmlFor={1}>Доставка транспортной компанией</label>
+                                <input type="radio" name="information" />
+                                <label>Доставка транспортной компанией</label>
                             </div>
                             <div>
-                                <input type="radio" name="information" id={1} />
-                                <label htmlFor={1}>Самовывоз со склада в Москве</label>
+                                <input type="radio" name="information" />
+                                <label>Самовывоз со склада в Москве</label>
                             </div>
                         </form>
                     </div>
@@ -57,65 +60,82 @@ function Order(props) {
                     </div>
                 </div>
                 <div className={s.information__oplata}>
-                    <div className={s.information__oplata__left}>
-                        <h1>Информация о доставке:</h1>
-                        <form>
-                            <div>
-                                <input type="radio" name="information" id={1} />
-                                <label htmlFor={1}>Наличными при получении</label>
-                            </div>
-                            <div>
-                                <input type="radio" name="information" id={1} />
-                                <label htmlFor={1}>Доставка транспортной компанией</label>
-                            </div>
-                            <div>
-                                <input type="radio" name="information" id={1} />
-                                <label htmlFor={1}>Самовывоз со склада в Москве</label>
-                            </div>
-                        </form>
-                    </div>
-                    <div className={s.information__oplata__right}>
-                        <div className={s.lift}>
-                            <h1>Лифт:</h1>
+                    <div>
+                        <div className={s.information__oplata__left}>
+                            <h1>Информация о доставке:</h1>
                             <form>
                                 <div>
-                                    <input type="radio" name="information" id={1} />
-                                    <label htmlFor={1}>Малый</label>
+                                    <input type="radio" name="information" />
+                                    <label>Наличными при получении</label>
                                 </div>
                                 <div>
-                                    <input type="radio" name="information" id={1} />
-                                    <label htmlFor={1}>Грузовой</label>
+                                    <input type="radio" name="information" />
+                                    <label>Доставка транспортной компанией</label>
                                 </div>
                                 <div>
-                                    <input type="radio" name="information" id={1} />
-                                    <label htmlFor={1}>Нет лифта</label>
+                                    <input type="radio" name="information" />
+                                    <label>Самовывоз со склада в Москве</label>
                                 </div>
                             </form>
+                        </div>
+                        <div className={s.information__oplata__right}>
+                            <div className={s.lift}>
+                                <h1>Лифт:</h1>
+                                <form>
+                                    <div>
+                                        <input type="radio" name="information" />
+                                        <label>Малый</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="information" />
+                                        <label>Грузовой</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="information" />
+                                        <label>Нет лифта</label>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                     <div className={s.total}>
                         <div className={s.climb__collection}>
                             <div className={s.climb__collection__left}>
+                                <h1>Подъем:</h1>
                                 <form>
                                     <div>
-                                        <input type="radio" name="information" id={1} />
-                                        <label htmlFor={1}>Малый</label>
+                                        <input type="radio" name="information" />
+                                        <label>Да</label>
                                     </div>
                                     <div>
-                                        <input type="radio" name="information" id={1} />
-                                        <label htmlFor={1}>Грузовой</label>
+                                        <input type="radio" name="information" />
+                                        <label>Нет</label>
+                                    </div>
+                                </form>
+                            </div>
+                            <div className={s.climb__collection__left}>
+                                <h1>Подъем:</h1>
+                                <form>
+                                    <div>
+                                        <input type="radio" name="information" />
+                                        <label>Да</label>
                                     </div>
                                     <div>
-                                        <input type="radio" name="information" id={1} />
-                                        <label htmlFor={1}>Нет лифта</label>
+                                        <input type="radio" name="information" />
+                                        <label>Нет</label>
                                     </div>
                                 </form>
                             </div>
                         </div>
-                        <div className={s}>
-
+                        <div className={s.itogo}>
+                            <h2>Итого:</h2>
+                            <h1>{434.658} ₽ </h1>
                         </div>
                     </div>
+                </div>
+                <div className={s.master}>
+                    <p><MdOutlineError className={s.icons} />У вас остались поля обязательные к заполнению</p>
+                    <button>Оформить</button>
                 </div>
             </section>
         </>

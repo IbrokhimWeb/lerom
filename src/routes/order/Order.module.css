@@ -41,13 +41,15 @@
 }
 
 .information__input{
-    display: flex;
-    justify-content: space-between;
+    gap: 30px;
+    display: grid;
+    grid-template-columns: auto auto auto;
     align-items: center;
     
 } 
 
 .information__input> input{
+    width: 100%;
     height: 70px;
     padding: 0 20px;
     border: none;
@@ -64,7 +66,7 @@
 }
 
 .information__adres__left{
-    width: 32%;
+    width: 34%;
     border-radius: 10px;
     padding: 30px;
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.152);
@@ -76,6 +78,7 @@
 
 .information__adres__left > form{
     gap: 30px;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -127,7 +130,14 @@
     /* justify-content: space-between; */
 }
 
+.information__oplata > div{
+    gap: 50px;
+    width: 100%;
+    display: flex;
+}
+
 .information__oplata__left{
+    width: 60%;
     border-radius: 10px;
     padding: 30px;
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.152);
@@ -156,7 +166,14 @@
     accent-color: var(--red);
 }
 
+.information__oplata__right{
+    width: 50%;
+
+}
+
 .lift{
+    width: 100%;
+    height: 300px;
     border-radius: 10px;
     padding: 30px;
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.152);
@@ -183,4 +200,208 @@
     width: 2rem;
     height: 2rem;
     accent-color: var(--red);
+}
+
+.total{
+    gap: 40px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.climb__collection{
+    gap: 50px;
+    display: flex;
+}
+
+.climb__collection__left{
+    width: 50%;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.152);
+}
+
+.climb__collection__left > h1{
+    margin-bottom: 20px;
+}
+
+.climb__collection__left > form{
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.climb__collection__left > form > div{
+    gap: 20px;
+    display: flex;
+    font-size: 1.2rem;
+    align-items: center;
+}
+
+.climb__collection__left input {
+    width: 2rem;
+    height: 2rem;
+    accent-color: var(--red);
+}
+
+.itogo{
+    width: 100%;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.152);
+    display: flex;
+    justify-content: space-between;
+}
+
+.itogo > h1{
+    color: var(--red);
+}
+
+.master{
+    gap: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.master > p{
+    text-align: center;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    color: var(--red);
+}
+
+.master > button{
+    width: 350px;
+    height: 50px;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--white);
+    border-radius: 8px;
+    background-color: var(--dark-blue);
+}
+
+
+@media (max-width: 1650px) {
+    .section{
+        gap: 15px;
+        align-items: center;
+    }
+
+    .information{
+        width: 100%;
+    }
+
+    .information__input{
+        grid-template-columns: auto auto;
+        justify-content:baseline;
+
+    }
+
+    .information__input > input{
+        width: 100%;
+    }
+
+    .information__adres{
+        gap: 15px;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .information__adres__right,
+    .information__adres__left{
+        width: 100%;
+    }
+
+    .information__adres__right > form{
+        grid-template-columns: auto auto;
+        width: 100%;
+    }
+
+    .information__oplata{
+        gap: 15px;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .information__oplata > div{
+        gap: 15px;
+    }
+
+    .information__oplata__left,
+    .information__oplata__right{
+        width: 50%;
+    }
+
+    .climb__collection{
+        gap: 15px;
+    }
+}
+
+
+@media (max-width: 1330px) {
+
+    .information__input{
+        grid-template-columns: auto;
+        justify-content:baseline;
+
+    }
+
+    .information__adres__right > form{
+        grid-template-columns: auto;
+    }
+
+    .information__oplata{
+    }
+
+    .information__oplata > div{
+        flex-direction: column;
+    }
+
+    .information__oplata__left,
+    .information__oplata__right{
+        width: 100%;
+    }
+
+    .climb__collection__left{
+        width: 100%;
+    }
+
+    .master{
+        flex-direction: column;
+    }
+
+    .master > p{
+        font-size: 1.5rem;
+        flex-direction: column;
+    }
+
+    .icons{
+        font-size: 2rem;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .section{
+        padding: 0 30px;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .climb__collection{
+        flex-direction: column;
+    }
+
+    .master > button{
+        font-size: 1.2rem;
+        width: 200px;
+    }
 }

@@ -11,7 +11,7 @@
 .content{
     gap: 20px;
     display: flex;
-    padding: 60px;
+    padding: 0 60px;
     flex-direction: column;
 }
 
@@ -24,7 +24,7 @@
     border-radius: 50%;
 }
 
-
+/* 
 @media (max-width: 1900px) {
     .card {
         width: 79%;
@@ -33,7 +33,7 @@
     .content{
         padding:0 60px;
     }
-}
+} */
 
 
 
