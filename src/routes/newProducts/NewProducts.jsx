@@ -12,10 +12,10 @@ import Select from "../../components/select/Select";
 import Payment from '../../components/payment/Payment';
 import Card from "../../components/cards/Card";
 import Compositions from "../../components/compositions/Compositions";
-import { ApiContex } from '../../contex/ApiContext';
+import { ApiContext } from '../../context/ApiContext';
 
 function NewProducts(props) {
-    const api = useContext(ApiContex);
+    const api = useContext(ApiContext);
     // console.log(api?.product);
 
     const [togle, setTogle] = useState(false);

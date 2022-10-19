@@ -1,14 +1,11 @@
 import { useEffect, useState } from "react";
-import {
-    Routes,
-    Route,
-    Link,
-} from "react-router-dom";
-import axios from "axios"
+import { Routes, Route, Link, } from "react-router-dom";
+// import axios from "axios"
 import s from "./App.module.css";
 
-// Import Data
-// import { Api } from "./api/Axios";
+// Import React icons
+import { FaCartPlus } from "react-icons/fa";
+import { ApiContext } from "./context/ApiContext";
 
 // Import components
 import Header from "./components/header/Header";
@@ -21,9 +18,6 @@ import Basket from "./routes/basket/Basket";
 import Order from "./routes/order/Order";
 
 
-// Import React icons
-import { FaCartPlus } from "react-icons/fa";
-import { ApiContex } from "./contex/ApiContext";
 
 function App() {
     const [api, setApi] = useState([]);
@@ -37,7 +31,7 @@ function App() {
 
     return (
         <>
-            <ApiContex.Provider value={api?.data}>
+            <ApiContext.Provider value={api?.data}>
                 <Link className={s.korzinka} to="/basket">
                     <FaCartPlus />
                 </Link>
@@ -51,7 +45,7 @@ function App() {
                     <Route path="/order" element={<Order />} />
                     <Route path="/product/:id" element={<SinglePage />} />
                 </Routes>
-            </ApiContex.Provider>
+            </ApiContext.Provider>
         </>
     );
 }

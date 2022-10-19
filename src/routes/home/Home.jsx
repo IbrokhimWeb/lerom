@@ -15,13 +15,13 @@ import Carusel from '../../components/carusel/Carusel';
 import Card from '../../components/cards/Card';
 import EndCard from "../../components/endCard/EndCard";
 import Footer from "../../components/footer/Footer";
-import { ApiContex } from "../../contex/ApiContext";
+import { ApiContext } from "../../context/ApiContext";
 
 
 
 
 function Home(props) {
-    const api = useContext(ApiContex);
+    const api = useContext(ApiContext);
     // console.log(api);
     return (
         <>

@@ -4,11 +4,8 @@ import s from "./SinglePage.module.css";
 // Import React Icons
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 
-// import assets
-import image from "../../assets/card2.png";
-
 // Import Data
-import { color_selection, product, tovar } from "../../static/static";
+import { product, tovar } from "../../static/static";
 
 
 // Import Components
@@ -16,11 +13,11 @@ import Payment from '../../components/payment/Payment';
 import Radio from '../../components/radio/Radio';
 import Characteristics from '../../components/characteristics/Characteristics';
 import Tovar from "../../components/tovar/Tovar";
-import { ApiContex } from '../../contex/ApiContext';
+import { ApiContext } from '../../context/ApiContext';
 import { useParams } from 'react-router-dom';
 
 function SinglePage(props) {
-    const api = useContext(ApiContex);
+    // const api = useContext(ApiContext);
     const [value, setValue] = useState(1);
 
 
@@ -28,8 +25,8 @@ function SinglePage(props) {
     const { id } = useParams();
     const allProducts = [...product];
     const singleProduct = allProducts.find(e => e.id === +id);
-    console.log(singleProduct);
-    const { img, model, v, sh, g, svet, sena } = singleProduct;
+    // console.log(singleProduct);
+    const { img, model, sales_code, weight, v, sh, g, svet, sena } = singleProduct;
 
 
     return (
@@ -43,7 +40,7 @@ function SinglePage(props) {
                         <p>{"Главная >> Гостиные >>"}<span>{"Коллекции"}</span></p>
                         <div className={s.nazvania}>
                             <h1>{model}</h1>
-                            <p>Артикул: {34235234523}</p>
+                            <p>Артикул: {sales_code}</p>
                         </div>
                         <div className={s.size}>
                             <div className={s.razmer}>
@@ -52,7 +49,7 @@ function SinglePage(props) {
                             </div>
                             <div className={s.ves}>
                                 <h2>Вес</h2>
-                                <p>{234234} кг</p>
+                                <p>{weight} кг</p>
                             </div>
                         </div>
                         <hr className={s.hr} />

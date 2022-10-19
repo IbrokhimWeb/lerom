@@ -1,12 +1,12 @@
 import React, { useContext, useState } from 'react';
-import { ApiContex } from '../../contex/ApiContext';
+import { ApiContext } from '../../context/ApiContext';
 import s from "./Order.module.css";
 
 // Import React icons
 import { MdOutlineError } from "react-icons/md";
 
 function Order(props) {
-    const api = useContext(ApiContex);
+    const api = useContext(ApiContext);
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [tel, setTel] = useState("");

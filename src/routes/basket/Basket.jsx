@@ -7,10 +7,10 @@ import { tovar } from "../../static/static";
 
 //  Import component
 import BasketCard from "../../components/basketCard/BasketCard";
-import { ApiContex } from '../../contex/ApiContext';
+import { ApiContext } from '../../context/ApiContext';
 
 function Basket(props) {
-    const api = useContext(ApiContex);
+    const api = useContext(ApiContext);
     // console.log(api);
     return (
         <>

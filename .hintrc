@@ -8,5 +8,8 @@
     "not ios_saf <= 15.3",
     "not safari <= 14.1",
     "not samsung <= 18"
-  ]
+  ],
+  "hints": {
+    "css-prefix-order": "off"
+  }
 }

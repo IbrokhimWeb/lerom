@@ -8,10 +8,10 @@ import { tovar, product } from "../../static/static";
 // Import Components
 import Tovar from '../tovar/Tovar';
 import Product from '../product/Product';
-import { ApiContex } from '../../contex/ApiContext';
+import { ApiContext } from '../../context/ApiContext';
 
 function Compositions(props) {
-    const api = useContext(ApiContex);
+    const api = useContext(ApiContext);
     // console.log(api?.tovar);
     
     const [page, setPage] = useState(true)
