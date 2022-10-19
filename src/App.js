@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import {
-    BrowserRouter,
     Routes,
     Route,
     Link,
@@ -16,9 +15,8 @@ import Header from "./components/header/Header";
 import Navbar from "./components/navbar/Navbar";
 import Home from "./routes/home/Home";
 import About from "./routes/about/About";
-import Product from "./routes/product/Product";
+import SinglePage from "./routes/singlePage/SinglePage";
 import NewProducts from "./routes/newProducts/NewProducts";
-import Footer from "./components/footer/Footer";
 import Basket from "./routes/basket/Basket";
 import Order from "./routes/order/Order";
 
@@ -37,7 +35,6 @@ function App() {
     //         .catch(err => console.log(`Nimadir xato ketdi\n ${err}`))
     // }, []);
 
-    // console.log(?.tovar);
     return (
         <>
             <ApiContex.Provider value={api?.data}>
@@ -49,10 +46,10 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
-                    <Route path="/product" element={<Product />} />
                     <Route path="/new" element={<NewProducts />} />
                     <Route path="/basket" element={<Basket />} />
                     <Route path="/order" element={<Order />} />
+                    <Route path="/product/:id" element={<SinglePage />} />
                 </Routes>
             </ApiContex.Provider>
         </>

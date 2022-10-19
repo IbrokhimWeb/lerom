@@ -30,7 +30,7 @@ function Compositions(props) {
                         </div>
                         <div className={s.block}>
                             <div className={s.product__items}>
-                                {api?.product?.map((e, i) => <Product key={i} data={e} />)}
+                                {product?.map((e, i) => <Product key={i} data={e} />)}
                             </div>
                         </div>
                     </>
@@ -45,7 +45,7 @@ function Compositions(props) {
                         </div>
                         <div className={s.block}>
                             <div className={s.tovar__items}>
-                                {api?.tovar.map((e, i) => <Tovar key={i} data={e} />)}
+                                {tovar.map((e, i) => <Tovar key={i} data={e} />)}
                             </div>
                         </div>
                     </>

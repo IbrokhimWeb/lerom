@@ -7,7 +7,6 @@ import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { MdDeleteForever } from "react-icons/md";
 
 // Import data
-import { color_selection } from "../../static/static";
 
 // import components 
 import Radio from "../radio/Radio";
@@ -30,7 +29,9 @@ function BasketCard(props) {
                 <div className={s.colors}>
                     <p>Цвет: <span>дуб</span></p>
                     <div className={s.radio}>
-                        {color_selection?.map((e, i) => <Radio key={i} data={e} />)}
+                        {/* {
+                            svet?.map((e, i) => <Radio key={i} data={e} />)
+                        } */}
                     </div>
                 </div>
 

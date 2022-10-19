@@ -11,43 +11,37 @@ function Card(props) {
     return (
         <>
             {
-
-
-                data.length > 1
-                    &&
-                    <>
-                        <div className={s.card__item}>
-                            <div className={s.card}>
-                                <img className={s.img} src={data[0].img} alt="photo" />
-                                <div className={s.content}>
-                                    <h1>{data[0].title}</h1>
-                                    <p>{data[0].description}</p>
-                                    <p>Товары под заказ в наличии: {data[0].price}</p>
-                                    <p>Цены от:{data[0].cost}</p>
-                                    <BsArrowLeftShort className={s.card_icons} />
-                                </div>
+                data.length > 1 &&
+                <>
+                    <div className={s.card__item}>
+                        <div className={s.card}>
+                            <img className={s.img} src={data[0].img} alt="photo" />
+                            <div className={s.content}>
+                                <h1>{data[0].title}</h1>
+                                <p>{data[0].description}</p>
+                                <p>Товары под заказ в наличии: {data[0].price}</p>
+                                <p>Цены от:{data[0].cost}</p>
+                                <BsArrowLeftShort className={s.card_icons} />
                             </div>
-                            
-                            <div className={s.card}>
-                                <div className={s.content}>
-                                    <h1>{data[1].title}</h1>
-                                    <p>{data[1].description}</p>
-                                    <p>Товары под заказ в наличии: {data[1].price}</p>
-                                    <p>Цены от:{data[1].cost}</p>
-                                    <BsArrowRightShort className={s.card_icons} />
-                                </div>
-                                <img src={data[1].img} alt="photo" />
+                        </div>
+                        <div className={s.card}>
+                            <div className={s.content}>
+                                <h1>{data[1].title}</h1>
+                                <p>{data[1].description}</p>
+                                <p>Товары под заказ в наличии: {data[1].price}</p>
+                                <p>Цены от:{data[1].cost}</p>
+                                <BsArrowRightShort className={s.card_icons} />
                             </div>
-
-                        </div> 
-                    </> 
-                    
+                            <img src={data[1].img} alt="photo" />
+                        </div>
+                    </div>
+                </>
             }
-                    </>
+        </>
     );
 }
 
-            export default Card;
+export default Card;
 
 
 
@@ -56,8 +50,8 @@ function Card(props) {
 
 
 
-             // <> 
-            {/* <div className={s.one}>
+// <> 
+{/* <div className={s.one}>
                             <img className={s.img2} src={data[0].img} alt="photo" />
                             <div className={s.content2}>
                                 <h1>{data[0].title}</h1>
@@ -67,8 +61,8 @@ function Card(props) {
                                 <BsArrowLeftShort className={s.card_icons} />
                             </div>
                         </div> */}
-            {/* </> */}
-            {/* } */}
+{/* </> */ }
+{/* } */ }
 
 
     // <>

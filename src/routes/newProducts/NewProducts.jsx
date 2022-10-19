@@ -25,7 +25,9 @@ function NewProducts(props) {
             <section className={s.section}>
                 <div className={s.left}>
                     <section className={s.section__left}>
-                        {select.map((e, i) => <Select key={i} data={e} />)}
+                        {
+                            select.map((e, i) => <Select key={i} data={e} />)
+                        }
                     </section>
                     <button className={s.button}>Скачать каталог <IoMdCloudDownload /></button>
                     <div className={s.payment}>
@@ -36,9 +38,11 @@ function NewProducts(props) {
                 <div className={s.right}>
                     <p>{"Главная >> Гостиные >>"}<span> Коллекции</span></p>
                     {
-                        !togle ?
+                        togle ?
                             <div className={s.shaddow}>
-                                {api?.card_posts?.map((e, i) => <Card key={i} index={i} data={e} />)}
+                                {
+                                    card_posts?.map((e, i) => <Card key={i} index={i} data={e} />)
+                                }
                             </div>
                             :
                             <div className={s.block}>

@@ -4,7 +4,7 @@
     right: 0;
     z-index: 9999;
     cursor: pointer;
-    position: absolute;
+    position: fixed;
     font-size: 3rem;
     color: var(--white);
     box-sizing: content-box;

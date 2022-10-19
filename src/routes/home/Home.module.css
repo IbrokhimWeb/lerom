@@ -1,10 +1,12 @@
 .home {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .cards{
+    width: 100%;
     display: grid;
     grid-template-columns: auto auto;
 }
@@ -39,4 +41,10 @@
     text-transform: uppercase;
     justify-content: space-around;
     align-items: center;
+}
+
+@media (max-width: 1500px) {
+    .cards {
+        grid-template-columns: auto;
+    }
 }

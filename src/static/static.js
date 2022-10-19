@@ -33,7 +33,17 @@ export const product = [
         v: 1462,
         sh: 360,
         g: 352,
-        svet: [color1, color2, color3, color4, color5, color1, color2, color3],
+        svet: [
+            { id: 1, name: "color", img: color1 },
+            { id: 2, name: "color", img: color2 },
+            { id: 3, name: "color", img: color3 },
+            { id: 4, name: "color", img: color4 },
+            { id: 5, name: "color", img: color5 },
+            { id: 6, name: "color", img: color1 },
+            { id: 7, name: "color", img: color2 },
+            { id: 8, name: "color", img: color3 },
+
+        ],
         sena: 6284
     },
     {
@@ -43,7 +53,17 @@ export const product = [
         v: 1462,
         sh: 360,
         g: 352,
-        svet: [color1, color2, color3, color4, color5, color1, color2, color3],
+        svet: [
+            { id: 1, name: "color", img: color1 },
+            { id: 2, name: "color", img: color2 },
+            { id: 3, name: "color", img: color3 },
+            { id: 4, name: "color", img: color4 },
+            { id: 5, name: "color", img: color5 },
+            { id: 6, name: "color", img: color1 },
+            { id: 7, name: "color", img: color2 },
+            { id: 8, name: "color", img: color3 },
+
+        ],
         sena: 6284
     },
     {
@@ -53,7 +73,17 @@ export const product = [
         v: 1462,
         sh: 360,
         g: 352,
-        svet: [color1, color2, color3, color4, color5, color1, color2, color3],
+        svet: [
+            { id: 1, name: "color", img: color1 },
+            { id: 2, name: "color", img: color2 },
+            { id: 3, name: "color", img: color3 },
+            { id: 4, name: "color", img: color4 },
+            { id: 5, name: "color", img: color5 },
+            { id: 6, name: "color", img: color1 },
+            { id: 7, name: "color", img: color2 },
+            { id: 8, name: "color", img: color3 },
+
+        ],
         sena: 6284
     },
     {
@@ -63,7 +93,17 @@ export const product = [
         v: 1462,
         sh: 360,
         g: 352,
-        svet: [color1, color2, color3, color4, color5, color1, color2, color3],
+        svet: [
+            { id: 1, name: "color", img: color1 },
+            { id: 2, name: "color", img: color2 },
+            { id: 3, name: "color", img: color3 },
+            { id: 4, name: "color", img: color4 },
+            { id: 5, name: "color", img: color5 },
+            { id: 6, name: "color", img: color1 },
+            { id: 7, name: "color", img: color2 },
+            { id: 8, name: "color", img: color3 },
+
+        ],
         sena: 6284
     },
     {
@@ -73,7 +113,17 @@ export const product = [
         v: 1462,
         sh: 360,
         g: 352,
-        svet: [color1, color2, color3, color4, color5, color1, color2, color3],
+        svet: [
+            { id: 1, name: "color", img: color1 },
+            { id: 2, name: "color", img: color2 },
+            { id: 3, name: "color", img: color3 },
+            { id: 4, name: "color", img: color4 },
+            { id: 5, name: "color", img: color5 },
+            { id: 6, name: "color", img: color1 },
+            { id: 7, name: "color", img: color2 },
+            { id: 8, name: "color", img: color3 },
+
+        ],
         sena: 6284
     },
     {
@@ -83,7 +133,17 @@ export const product = [
         v: 1462,
         sh: 360,
         g: 352,
-        svet: [color1, color2, color3, color4, color5, color1, color2, color3],
+        svet: [
+            { id: 1, name: "color", img: color1 },
+            { id: 2, name: "color", img: color2 },
+            { id: 3, name: "color", img: color3 },
+            { id: 4, name: "color", img: color4 },
+            { id: 5, name: "color", img: color5 },
+            { id: 6, name: "color", img: color1 },
+            { id: 7, name: "color", img: color2 },
+            { id: 8, name: "color", img: color3 },
+
+        ],
         sena: 6284
     },
 
@@ -156,11 +216,7 @@ export const tovar = [
 ];
 
 export const color_selection = [
-    {
-        id: 1,
-        name: "color",
-        img: color1
-    },
+    { id: 1, name: "color", img: color1 },
     {
         id: 2,
         name: "color",
@@ -198,7 +254,7 @@ export const color_selection = [
     },
 ];
 
-export const card_posts = [ 
+export const card_posts = [
     [
         {
             id: 1,
