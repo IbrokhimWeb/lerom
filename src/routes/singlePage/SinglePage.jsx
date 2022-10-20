@@ -2,7 +2,6 @@ import React, { useContext, useState } from 'react';
 import s from "./SinglePage.module.css";
 import { useParams } from 'react-router-dom';
 // import { ApiContext } from '../../context/ApiContext';
-import { BasketContext } from "../../context/BasketContext";
 
 
 
@@ -28,11 +27,12 @@ import Tovar from "../../components/tovar/Tovar";
 function SinglePage(props) {
     // const api = useContext(ApiContext);
     const [value, setValue] = useState(1);
+    const [ addToBasket, setAddToBasket] = useState({}); 
 
     const { id } = useParams();
     const allProducts = [...product, ...tovar];
     const singleProduct = allProducts.find( e => e.id === +id);
-    console.log(singleProduct);
+    // console.log(singleProduct);
     const { img, model, sales_code, weight, v, sh, g, svet, sena } = singleProduct;
 
     return (

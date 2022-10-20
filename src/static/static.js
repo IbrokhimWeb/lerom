@@ -16,9 +16,8 @@ import about3 from "../assets/about3.png";
 
 import tovar1 from "../assets/tovar1.png";
 import product1 from "../assets/product1.png";
+import Basket from "../routes/basket/Basket";
 
-import { v4 as uuidv4 } from 'uuid';
-let id = uuidv4();
 
 export const select = [
     ["Новинки"],
@@ -28,6 +27,10 @@ export const select = [
     ["Детские"],
     ["Кровати"],
     ["Матрасы"]
+];
+
+export const  basket = [
+
 ];
 
 export const product = [

@@ -11,8 +11,8 @@ import Product from '../product/Product';
 import { ApiContext } from '../../context/ApiContext';
 
 function Compositions(props) {
-    const api = useContext(ApiContext);
-    // console.log(api?.tovar);
+    const { api } = useContext(ApiContext);
+    console.log(api);
     
     const [page, setPage] = useState(true)
     return (
