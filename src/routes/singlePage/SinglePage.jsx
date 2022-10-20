@@ -30,9 +30,9 @@ function SinglePage(props) {
     const [value, setValue] = useState(1);
 
     const { id } = useParams();
-    const allProducts = [...product];
-    const singleProduct = allProducts.find(e => e.id === id);
-    // console.log(singleProduct);
+    const allProducts = [...product, ...tovar];
+    const singleProduct = allProducts.find( e => e.id === +id);
+    console.log(singleProduct);
     const { img, model, sales_code, weight, v, sh, g, svet, sena } = singleProduct;
 
     return (
@@ -89,7 +89,7 @@ function SinglePage(props) {
                     <h1>С ЭТИМ ТОВАРОМ МОЖНО КУПИТЬ</h1>
                     <div className={s.item}>
                         {
-                            tovar.map((e, i) => <Tovar key={i} data={e} />)
+                            tovar.map((e, i) => i < 6 && <Tovar key={i} data={e} />)
                         }
                     </div>
                 </div>
