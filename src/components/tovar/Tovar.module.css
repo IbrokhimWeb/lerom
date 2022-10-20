@@ -1,6 +1,7 @@
 .section {
+    max-width: 300px;
     min-height: 435px;
-    padding: 10px 20px;
+    padding: 20px;
     text-align: center;
     transform: scale(1);
     border-radius: 10px;

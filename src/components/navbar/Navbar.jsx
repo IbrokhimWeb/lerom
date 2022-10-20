@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import s from "./Navbar.module.css";
+import React, { useContext, useState } from 'react';
 import { Link } from "react-router-dom";
+import { ApiContext } from '../../context/ApiContext';
+import s from "./Navbar.module.css";
 
 
 // Import React Icons
@@ -8,6 +9,8 @@ import { BiSearchAlt } from "react-icons/bi"
 
 
 function Navbar(props) {
+    const api = useContext(ApiContext);
+
     const [ togle, setTogle] = useState(true);
     return (
         <>

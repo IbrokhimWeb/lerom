@@ -1,5 +1,7 @@
-import React from 'react';
-import s from "./Carusel.module.css"
+import React, { useContext } from 'react';
+import s from "./Carusel.module.css";
+import { ApiContext } from '../../context/ApiContext';
+
 
 // Import React Icons
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
@@ -8,6 +10,8 @@ import { HiOutlineUser } from "react-icons/hi";
 import { AiOutlineStar } from "react-icons/ai";
 
 function Carusel(props) {
+    const api = useContext(ApiContext);
+
     return ( 
         <>
             <div className={s.carusel}>
@@ -20,14 +24,14 @@ function Carusel(props) {
                             <div className={s.production}>
                                 <TbMaximize className={s.activate__icons} />
                                 <div>
-                                    <h2>{'>100 000'} <span>м2</span></h2>
+                                    <h2>{'>'}{api?.info?.square} <span>м2</span></h2>
                                     <p>Производственная <br /> площадь.</p>
                                 </div>
                             </div>
                             <div className={s.working}>
                                 <HiOutlineUser className={s.activate__icons} />
                                 <div>
-                                    <h2>{'>>1 100'} <span>чел</span></h2>
+                                    <h2>{'>>'}{api?.info?.employee} <span>чел</span></h2>
                                     <p>Рабочий <br />коллектив.</p>
                                 </div>
                             </div>

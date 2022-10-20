@@ -8,11 +8,12 @@ import { Link } from 'react-router-dom';
 function Card(props) {
     // const { id, title, img, price, description, cost } = props.data;
     const { data } = props;
+    console.log(data);
 
     return (
         <>
             {
-                data?.length > 1 &&
+                data?.length > 1 && data[0].type == "usual" &&
                 <>
                     <div className={s.card__item}>
                         <div className={s.card}>
