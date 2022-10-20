@@ -1,30 +1,27 @@
 import React, { useContext } from 'react';
+import { ApiContext } from '../../context/ApiContext';
 import { Link } from 'react-router-dom';
 import s from "./Basket.module.css";
 
-// Import data
-import { tovar, basket } from "../../static/static";
-
 //  Import component
 import BasketCard from "../../components/basketCard/BasketCard";
-import { ApiContext } from '../../context/ApiContext';
 
 function Basket(props) {
     const api = useContext(ApiContext);
     // console.log(api);
-    console.log(basket);
+    // console.log(api?.basket);
     return (
         <>
             <section className={s.section}>
                 <h1>Корзина</h1>  <br />
                 <hr />
                 {
-                    basket?.map((e, i) => <BasketCard key={i} data={e} />)}
+                    api?.basket?.map((e, i) => <BasketCard key={i} data={e} />)}
                 {
-                    basket?.length ?
+                    api?.basket?.length ?
                         <>
                             <div className={s.submit}>
-                                <h1>Итого: <span> {434658}" ₽"</span></h1>
+                                <h1>Итого: <span> {' 434 658'} ₽</span></h1>
                                 <Link className={s.button} to="/order">Оформить заказ</Link>
                             </div>
                         </>

@@ -10,7 +10,8 @@ import Radio from "../radio/Radio";
 
 function BasketCard(props) {
     const { id, img, model, v, sh, g, svet, sena, value } = props.data;
-    const [val, setVal] = useState(value)
+    const [val, setVal] = useState(value);
+    // console.log(props.data);
     return (
         <>
             <section className={s.section}>

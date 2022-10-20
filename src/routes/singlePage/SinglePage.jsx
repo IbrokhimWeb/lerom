@@ -1,17 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react';
-import s from "./SinglePage.module.css";
+import { ApiContext } from '../../context/ApiContext';
 import { useParams } from 'react-router-dom';
-// import { ApiContext } from '../../context/ApiContext';
-
-
-
+import s from "./SinglePage.module.css";
 
 // Import React Icons
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
-
-// Import Data
-import { product, tovar, basket } from "../../static/static";
-
 
 // Import Components
 import Payment from '../../components/payment/Payment';
@@ -19,17 +12,19 @@ import Radio from '../../components/radio/Radio';
 import Characteristics from '../../components/characteristics/Characteristics';
 import Tovar from "../../components/tovar/Tovar";
 
+
+
 function SinglePage(props) {
-    // const api = useContext(ApiContext);
+    const api = useContext(ApiContext);
     const [value, setValue] = useState(1);
     const [addToBasket, setAddToBasket] = useState({});
 
 
 
     const { id } = useParams();
-    const allProducts = [...product, ...tovar];
+    // const 
+    const allProducts = [...api.product];
     const singleProduct = allProducts.find(e => e.id === +id);
-    // console.log(singleProduct);
     const { img, model, sales_code, weight, v, sh, g, svet, sena } = singleProduct;
 
 
@@ -53,15 +48,6 @@ function SinglePage(props) {
     //         .then(res => res.json())
     //         .then(data => console.log(data))
     // }
-
-
-
-
-
-
-
-
-
 
     return (
         <>
@@ -106,7 +92,7 @@ function SinglePage(props) {
                         </div>
                         <button
                             className={s.button}
-                            onClick={() => { basket.push(addToBasket)}}
+                            onClick={() => { api?.basket?.push(addToBasket) }}
                         >Купить</button>
                     </div>
                     <div className={s.axsia}>
@@ -120,7 +106,7 @@ function SinglePage(props) {
                     <h1>С ЭТИМ ТОВАРОМ МОЖНО КУПИТЬ</h1>
                     <div className={s.item}>
                         {
-                            tovar.map((e, i) => i < 6 && <Tovar key={i} data={e} />)
+                            api?.product?.map((e, i) => i < 6 && e.type === "tovar" && <Tovar key={i} data={e} />)
                         }
                     </div>
                 </div>

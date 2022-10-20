@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { Routes, Route, Link, } from "react-router-dom";
-// import axios from "axios"
+import axios from "axios";
 import s from "./App.module.css";
+import { api } from "./static/static";
 
 // Import React icons
 import { FaCartPlus } from "react-icons/fa";
@@ -20,18 +21,18 @@ import Order from "./routes/order/Order";
 
 
 function App() {
-    const [api, setApi] = useState([]);
-    const [loading, setLoading] = useState(false);
+    const [ data, setData] = useState({api});
+    // console.log(data.api);
 
     // useEffect(() => {
     //     axios.get(`http://10.10.1.160:2005/api`)
-    //         .then(res => setApi(res))
+    //         .then(res => setData(res))
     //         .catch(err => console.log(`Nimadir xato ketdi\n ${err}`))
     // }, []);
 
     return (
         <>
-            <ApiContext.Provider value={api?.data}>
+            <ApiContext.Provider value={data.api}>
                 <Link className={s.korzinka} to="/basket">
                     <FaCartPlus />
                 </Link>

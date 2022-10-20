@@ -1,13 +1,17 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { ApiContext } from '../../context/ApiContext';
 import s from "./Characteristics.module.css";
-
-// Import data
-import { tovar } from "../../static/static"
 
 // Import Components
 import Tovar from '../tovar/Tovar';
 
+
+
 function Characteristics(props) {
+    const api = useContext(ApiContext);
+
+
+
     const [page, setPage] = useState(true);
     return (
         <>
@@ -60,7 +64,9 @@ function Characteristics(props) {
                             </div>
                             <div className={s.block}>
                                 <div className={s.items}>
-                                    {tovar.map((e, i) => <Tovar key={i} data={e} />)}
+                                    {
+                                        api?.content?.map((e, i) => e.type === "tovar" && <Tovar key={i} data={e} />)
+                                    }
                                 </div>
                             </div>
                         </>

@@ -3,7 +3,7 @@ import s from "./Compositions.module.css";
 
 
 // Import data
-import { tovar, product } from "../../static/static";
+// import { tovar, product } from "../../static/static";
 
 // Import Components
 import Tovar from '../tovar/Tovar';
@@ -14,7 +14,8 @@ function Compositions(props) {
     const api = useContext(ApiContext);
     // console.log(api);
 
-    const [page, setPage] = useState(true)
+    const [page, setPage] = useState(true);
+    
     return (
         <>
             {
@@ -31,7 +32,7 @@ function Compositions(props) {
                         <div className={s.block}>
                             <div className={s.product__items}>
                                 {
-                                    product?.map((e, i) => <Product key={i} data={e} />)
+                                    api?.product?.map((e, i) => e.type == "product" && <Product key={i} data={e} />)
                                 }
                             </div>
                         </div>
@@ -48,7 +49,7 @@ function Compositions(props) {
                         <div className={s.block}>
                             <div className={s.tovar__items}>
                                 {
-                                    tovar.map((e, i) => <Tovar key={i} data={e} />)
+                                    api?.product?.map((e, i) => e.type == "tovar" && <Tovar key={i} data={e} />)
                                 }
                             </div>
                         </div>

@@ -1,8 +1,6 @@
 import React, { useContext } from "react";
+import { ApiContext } from "../../context/ApiContext";
 import s from "./Home.module.css";
-
-// Import data
-import { card_posts } from "../../static/static";
 
 // Import react icons
 import { AiOutlineArrowDown } from "react-icons/ai";
@@ -15,30 +13,31 @@ import Carusel from '../../components/carusel/Carusel';
 import Card from '../../components/cards/Card';
 import EndCard from "../../components/endCard/EndCard";
 import Footer from "../../components/footer/Footer";
-import { ApiContext } from "../../context/ApiContext";
-
-
 
 
 function Home(props) {
     const api = useContext(ApiContext);
-    // console.log(api);
+    // console.log(api.card);
     return (
         <>
             <div className={s.home}>
                 <Carusel />
                 <div className={s.cards}>
-                    {card_posts?.map((e, i) =>  <Card key={i} index={i} data={e} /> )}
+                    {
+                        api?.card?.map((e, i) =>  <Card key={i} index={i} data={e} /> )
+                    }
                 </div>
                 {
-                    card_posts?.map((e, i)=> <EndCard key={i} data={e}/> )   
+                    api?.card?.map((e, i)=> <EndCard key={i} data={e}/> )   
                 }
                 <Video />
                 <div className={s.two__section}>
                     <h2>Информация</h2><h2>Интересное</h2>
                 </div>
                 <div className={s.cards}>
-                    {card_posts?.map((e, i) =>  <Card key={i} index={i} data={e} /> )}
+                    {
+                        api?.card?.map((e, i) =>  <Card key={i} index={i} data={e} /> )
+                    }
                 </div>
                 <div className={s.two_section}>
                     <p>лером</p>
