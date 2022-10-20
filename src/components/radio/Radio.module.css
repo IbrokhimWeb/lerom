@@ -22,6 +22,8 @@ li{
 
 .input {
     display: none;
+    width: 2em;
+    height: 2em;
     position: absolute;
 }
 

@@ -14,9 +14,12 @@ import about1 from "../assets/about1.png";
 import about2 from "../assets/about2.png";
 import about3 from "../assets/about3.png";
 
+import logo from "../assets/logo.png";
+
 import tovar1 from "../assets/tovar1.png";
 import product1 from "../assets/product1.png";
 import Basket from "../routes/basket/Basket";
+
 
 
 export const select = [
@@ -29,7 +32,7 @@ export const select = [
     ["Матрасы"]
 ];
 
-export const  basket = [
+export const basket = [
 
 ];
 
@@ -396,3 +399,148 @@ export const about_data = [
         time: '23.11.21',
     },
 ]
+
+
+
+
+
+
+
+
+export const api = {
+    basket: [],
+    product: [
+        {
+            id: 1,
+            img: product1,
+            type: "product",
+            model: "Мелисса композиция 1",
+            voloume: 12,
+            sales_code: 34235234523,
+            weight: 234234,
+            v: 1462,
+            sh: 360,
+            g: 352,
+            svet: [color1, color2, color3, color4, color5, color1, color2, color3],
+            sena: 6284
+        },
+        {
+            id: 2,
+            img: tovar1,
+            type: "tovar",
+            model: "АН-2801",
+            voloume: 24,
+            sales_code: 34235234523,
+            weight: 234234,
+            v: 4562,
+            sh: 678,
+            g: 7654,
+            svet: [color1, color2, color3, color4, color5, color1, color2, color3],
+            sena: 7348
+        },
+    ],
+
+    card: [
+        [
+            {
+                id: 1,
+                type: "usual",
+                title: "Гостиные",
+                description: "Мини текст описания и преимущества покупки данного направления.",
+                price: 2030,
+                cost: 42.000,
+                img: card1,
+            },
+            {
+                id: 2,
+                type: "usual",
+                title: "Детские",
+                description: "Мини текст описания и преимущества покупки данного направления.",
+                price: 2030,
+                cost: 42.000,
+                img: card3,
+            }
+        ],
+        [
+            {
+                id: 1,
+                type: "Information",
+                title: "Доставка по всей России",
+                description: "Мини текст описания новости ее актуальности",
+                img: card1,
+            },
+            {
+                id: 2,
+                type: "Information",
+                title: "Бесплатная сборка",
+                description: "Мини текст описания новости и ее актуальности",
+                img: card2,
+            }
+        ],
+        [
+            {
+                id: 3,
+                type: "interesting",
+                title: "Как выбрать матрас",
+                description: "Мини текст описания новости ее актуальности",
+                img: card1,
+            },
+            {
+                id: 4,
+                type: "interesting",
+                title: "Какой шкаф выбрать в 2022 году",
+                description: "Мини текст описания новости и ее актуальности",
+                img: card2,
+            }
+        ],
+        [
+            {
+                id: 5,
+                type: "alone",
+                title: "Кровати",
+                description: "Мини текст описания и преимущества покупки данного направления.",
+                price: 2030,
+                cost: 42.000,
+                img: card5,
+            },
+        ]
+    ],
+
+    info: {
+        logo: logo,
+        working_time: {
+            mn_fr: '10:00 до 20:00',
+            st_sn: '10:00 до 19:00'
+        },
+        sales: ['8 (495) 664-54-57', '8 (929) 928-86-35'],
+        across_Russia: '8-800-000-00-00',
+        square: 100000,
+        employee: 1100,
+        year: 2022,
+
+        about: [
+            {
+                id: 1,
+                img: about3,
+                title: "заголовок новости",
+                description: `"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"`,
+                time: '23.11.21',
+            },
+            {
+                id: 2,
+                img: about1,
+                title: "заголовок новости",
+                description: `"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"`,
+                time: '23.11.21',
+            },
+            {
+                id: 3,
+                img: about2,
+                title: "заголовок новости",
+                description: `"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"`,
+                time: '23.11.21',
+            },
+        ],
+    }
+
+}

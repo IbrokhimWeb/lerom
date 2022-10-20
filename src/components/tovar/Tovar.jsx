@@ -12,7 +12,7 @@ function Tovar(props) {
         <>
             <section className={s.section}>
                 {
-                    !props?.data && img && svet
+                    props?.data && img && svet
                         ?
                         <>
                             <img src={img} alt="Tovar" /> {/**`http://10.10.1.160:2005${img}` */}

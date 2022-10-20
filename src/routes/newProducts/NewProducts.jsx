@@ -13,12 +13,13 @@ import Payment from '../../components/payment/Payment';
 import Card from "../../components/cards/Card";
 import Compositions from "../../components/compositions/Compositions";
 import { ApiContext } from '../../context/ApiContext';
+import { Link } from 'react-router-dom';
 
 function NewProducts(props) {
     const api = useContext(ApiContext);
     // console.log(api?.product);
 
-    const [togle, setTogle] = useState(false);
+    const [togle, setTogle] = useState(true);
 
     return (
         <>
@@ -36,18 +37,32 @@ function NewProducts(props) {
                 </div>
 
                 <div className={s.right}>
-                    <p>{"Главная >> Гостиные >>"}<span> Коллекции</span></p>
+                    {/* <p>{"Главная >> Гостиные >>"}<span> Коллекции</span></p> */}
                     {
                         togle ?
-                            <div className={s.shaddow}>
-                                {
-                                    card_posts?.map((e, i) => <Card key={i} index={i} data={e} />)
-                                }
-                            </div>
+                            <>
+                                <p className={s.router}>
+                                    <Link to="/">{'Главная '}</Link> {' >> '}
+                                    <Link to="/new">{' Гостиные '}</Link> {' >> '}
+                                    <span>Коллекции</span>
+                                </p>
+                                <div className={s.shaddow}>
+                                    {
+                                        card_posts?.map((e, i) => <Card key={i} index={i} data={e} />)
+                                    }
+                                </div>
+                            </>
                             :
-                            <div className={s.block}>
-                                <Compositions />
-                            </div>
+                            <>
+                                <p className={s.router}>
+                                    <Link to="/">{'Главная '}</Link> {' >> '}
+                                    <Link to="/new">{' Гостиные '}</Link> {' >> '}
+                                    <span>Коллекции</span>
+                                </p>
+                                <div className={s.block}>
+                                    <Compositions />
+                                </div>
+                            </>
                     }
                 </div>
             </section>

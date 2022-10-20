@@ -30,6 +30,16 @@
     flex-direction: column;
 }
 
+.content2{
+    gap: 20px;
+    width: 476px;
+    display: flex;
+    /* align-items: flex-end;
+    text-align: end; */
+    padding: 60px;
+    flex-direction: column;
+}
+
 @media (max-width: 1900px) {
     .card > img{
         width: 50%;

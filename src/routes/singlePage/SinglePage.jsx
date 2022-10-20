@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import s from "./SinglePage.module.css";
 import { useParams } from 'react-router-dom';
 // import { ApiContext } from '../../context/ApiContext';
@@ -10,7 +10,7 @@ import { useParams } from 'react-router-dom';
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 
 // Import Data
-import { product, tovar } from "../../static/static";
+import { product, tovar, basket } from "../../static/static";
 
 
 // Import Components
@@ -19,21 +19,49 @@ import Radio from '../../components/radio/Radio';
 import Characteristics from '../../components/characteristics/Characteristics';
 import Tovar from "../../components/tovar/Tovar";
 
-
-
-
-
-
 function SinglePage(props) {
     // const api = useContext(ApiContext);
     const [value, setValue] = useState(1);
-    const [ addToBasket, setAddToBasket] = useState({}); 
+    const [addToBasket, setAddToBasket] = useState({});
+
+
 
     const { id } = useParams();
     const allProducts = [...product, ...tovar];
-    const singleProduct = allProducts.find( e => e.id === +id);
+    const singleProduct = allProducts.find(e => e.id === +id);
     // console.log(singleProduct);
     const { img, model, sales_code, weight, v, sh, g, svet, sena } = singleProduct;
+
+
+
+
+    useEffect(() => {
+        setAddToBasket({ ...singleProduct, sena: singleProduct.sena, value })
+    }, [singleProduct, value]);
+
+
+    // const addBasket = () => {
+    //     const url = `api_url`;
+    //     const { img, model, sales_code, weight, v, sh, g, svet, sena } = addToBasket;
+    //     fatch( url, {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/jison'
+    //         },
+    //         body: JSON.stringify({ img, model, sales_code, weight, v, sh, g, svet, sena })
+    //     })
+    //         .then(res => res.json())
+    //         .then(data => console.log(data))
+    // }
+
+
+
+
+
+
+
+
+
 
     return (
         <>
@@ -76,7 +104,10 @@ function SinglePage(props) {
                                 <AiOutlinePlus className={s.inc__dec__icons} onClick={() => setValue(value + 1)} />
                             </div>
                         </div>
-                        <button className={s.button}>Купить</button>
+                        <button
+                            className={s.button}
+                            onClick={() => { basket.push(addToBasket)}}
+                        >Купить</button>
                     </div>
                     <div className={s.axsia}>
                         <Payment />

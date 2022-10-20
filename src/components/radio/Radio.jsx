@@ -1,15 +1,16 @@
 import React from 'react';
 import s from "./Radio.module.css";
 
-function Radio(props) {
-    // console.log(props);
-    const { id, name, img } = props?.data;
+import { v4 as uuidv4 } from 'uuid';
+
+function Radio({ data , name}) {
+    const uuid = uuidv4()
     return (
         <>
             <li>
-                <input className={s.input} type="radio" name={name} id={id} />
-                <label className={s.label} htmlFor={id}></label>
-                <img className={s.checkbox__img} src={img} />
+                <input className={s.input} type="radio" name={name} id={uuid} />
+                <label className={s.label} htmlFor={uuid} ></label>
+                <img className={s.checkbox__img} src={data.img} />
             </li>
         </>
     );

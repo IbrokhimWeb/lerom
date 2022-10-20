@@ -1,37 +1,35 @@
 import React, { useState } from 'react';
 import s from "./BasketCard.module.css";
-import { v4 as uuidv4 } from 'uuid';
 
 // Import React Icons
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { MdDeleteForever } from "react-icons/md";
 
-// Import data
-
 // import components 
 import Radio from "../radio/Radio";
 
 function BasketCard(props) {
-    let uuid = uuidv4();
-    const { id, img, model, v, sh, g, svet, sena } = props.data;
-    const [value, setValue] = useState(1)
+    const { id, img, model, v, sh, g, svet, sena, value } = props.data;
+    const [val, setVal] = useState(value)
     return (
         <>
             <section className={s.section}>
                 <div className={s.about}>
-                    <img src={`http://10.10.1.160:2005${img}`} alt="tovar" />
+                    <img src={img} alt="tovar" /> {/**`http://10.10.1.160:2005${img}` */}
                     <div className={s.model}>
                         <h1>{model}</h1>
                         <p>Pазмер: <span>{`в ${v} ш ${sh} г ${g} `}</span></p>
-                        <button><MdDeleteForever/> Удалить</button>
+                        <button onClick={() => { }} >
+                            <MdDeleteForever /> Удалить
+                        </button>
                     </div>
                 </div>
                 <div className={s.colors}>
                     <p>Цвет: <span>дуб</span></p>
                     <div className={s.radio}>
-                        {/* {
-                            svet?.map((e, i) => <Radio key={i} data={e} />)
-                        } */}
+                        {
+                            svet?.map((e, i) => <Radio name={id} key={i} data={e} />)
+                        }
                     </div>
                 </div>
 
@@ -41,11 +39,11 @@ function BasketCard(props) {
                         <p>цена за 1 шт</p>
                     </div>
                     <div className={s.inc__dec}>
-                        <AiOutlineMinus className={s.inc__dec__icons} onClick={() => value > 1 ? setValue(value - 1) : setValue(value)} />
-                        <p> {value} </p>
-                        <AiOutlinePlus className={s.inc__dec__icons} onClick={() => setValue(value + 1)} />
+                        <AiOutlineMinus className={s.inc__dec__icons} onClick={() => val > 1 ? setVal(val - 1) : setVal(val)} />
+                        <p> {val} </p>
+                        <AiOutlinePlus className={s.inc__dec__icons} onClick={() => setVal(val + 1)} />
                     </div>
-                    <h1>{sena * value} ₽</h1>
+                    <h1>{sena * val} ₽</h1>
                 </div>
             </section>
             <hr />

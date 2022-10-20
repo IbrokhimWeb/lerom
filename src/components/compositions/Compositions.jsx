@@ -11,9 +11,9 @@ import Product from '../product/Product';
 import { ApiContext } from '../../context/ApiContext';
 
 function Compositions(props) {
-    const { api } = useContext(ApiContext);
-    console.log(api);
-    
+    const api = useContext(ApiContext);
+    // console.log(api);
+
     const [page, setPage] = useState(true)
     return (
         <>
@@ -30,7 +30,9 @@ function Compositions(props) {
                         </div>
                         <div className={s.block}>
                             <div className={s.product__items}>
-                                {product?.map((e, i) => <Product key={i} data={e} />)}
+                                {
+                                    product?.map((e, i) => <Product key={i} data={e} />)
+                                }
                             </div>
                         </div>
                     </>
@@ -45,7 +47,9 @@ function Compositions(props) {
                         </div>
                         <div className={s.block}>
                             <div className={s.tovar__items}>
-                                {tovar.map((e, i) => <Tovar key={i} data={e} />)}
+                                {
+                                    tovar.map((e, i) => <Tovar key={i} data={e} />)
+                                }
                             </div>
                         </div>
                     </>

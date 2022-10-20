@@ -3,6 +3,7 @@ import s from "./Card.module.css";
 
 // Import React icons 
 import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
+import { Link } from 'react-router-dom';
 
 function Card(props) {
     // const { id, title, img, price, description, cost } = props.data;
@@ -11,7 +12,7 @@ function Card(props) {
     return (
         <>
             {
-                data.length > 1 &&
+                data?.length > 1 &&
                 <>
                     <div className={s.card__item}>
                         <div className={s.card}>
@@ -20,17 +21,21 @@ function Card(props) {
                                 <h1>{data[0].title}</h1>
                                 <p>{data[0].description}</p>
                                 <p>Товары под заказ в наличии: {data[0].price}</p>
-                                <p>Цены от:{data[0].cost}</p>
-                                <BsArrowLeftShort className={s.card_icons} />
+                                <p>Цены от: {data[0].cost}</p>
+                                <Link to="/new">
+                                    <BsArrowLeftShort className={s.card_icons} />
+                                </Link>
                             </div>
                         </div>
                         <div className={s.card}>
-                            <div className={s.content}>
+                            <div className={s.content2}>
                                 <h1>{data[1].title}</h1>
                                 <p>{data[1].description}</p>
                                 <p>Товары под заказ в наличии: {data[1].price}</p>
-                                <p>Цены от:{data[1].cost}</p>
-                                <BsArrowRightShort className={s.card_icons} />
+                                <p>Цены от: {data[1].cost}</p>
+                                <Link to="/new">
+                                    <BsArrowRightShort className={s.card_icons} />
+                                </Link>
                             </div>
                             <img src={data[1].img} alt="photo" />
                         </div>
