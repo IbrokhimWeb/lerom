@@ -35,8 +35,8 @@ function Header(props) {
                         <p>Отдел продаж:</p>
                         <BsTelephoneFill className={s.headerPhone__icons}/>
                         <div className={s.phone__number}>
-                            {/* <p>{api?.info?.sales[0]}</p>
-                            <p>{api?.info?.sales[1]}</p> */}
+                            <p>{api?.info?.sales[0]}</p>
+                            <p>{api?.info?.sales[1]}</p>
                         </div>
                     </div>
                     <div className={s.russian__conversation}>

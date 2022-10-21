@@ -11,7 +11,7 @@ function AboutCard(props) {
     return (
         <>
             <section className={s.section}>
-                <img src={img} alt="about.png" />
+                <img src={`http://10.10.1.160:2004/media/${img}`} alt="about.png" />
                 <h1>{title}</h1>
                 <p>{description}</p>
                 <p className={s.p}>Дата публикации:  {time}</p>
