@@ -21,7 +21,7 @@ console.log(api);
                     page
                         ? <>
                             <div className={s.pages}>
-                                <span className={s.marginL} />
+                                <span className={s.marginLe} />
                                 <button className={s.button1} onClick={() => setPage(true)}>Технические характеристики</button>
                                 <span className={s.transform} onClick={() => setPage(false)} />
                                 <button className={s.button2} onClick={() => setPage(false)}>Состав композиции</button>

@@ -7,6 +7,7 @@
 }
 
 .button1 {
+    z-index: 1;
     color: var(--white);
     font-size: 16px;
     cursor: pointer;
@@ -17,7 +18,7 @@
 }
 
 .transform{
-    z-index: 999;
+    z-index: 1;
     margin:0 -20px;
     width: 35px;
     cursor: pointer;
@@ -26,7 +27,7 @@
 }
 
 .transform__revers{
-    z-index: 999;
+    z-index: 1;
     margin:0 -20px;
     width: 35px;
     cursor: pointer;
@@ -34,11 +35,16 @@
     background-color: var(--white);
 }
 
-.marginL{
+.marginLe{
     margin-left: 40px;
 }
 
+.marginL{
+    margin-left: 80px;
+}
+
 .button2 {
+    z-index: 1;
     cursor: pointer;
     font-size: 16px;
     border: none;
