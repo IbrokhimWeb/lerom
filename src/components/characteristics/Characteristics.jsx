@@ -10,9 +10,10 @@ import Tovar from '../tovar/Tovar';
 function Characteristics(props) {
     const api = useContext(ApiContext);
 
-
+console.log(api);
 
     const [page, setPage] = useState(true);
+
     return (
         <>
             <section className={s.section}>
@@ -65,7 +66,7 @@ function Characteristics(props) {
                             <div className={s.block}>
                                 <div className={s.items}>
                                     {
-                                        api?.content?.map((e, i) => e.type === "tovar" && <Tovar key={i} data={e} />)
+                                        api?.product?.map((e, i) => e.type == "tovar"  && <Tovar key={i} data={e} />)
                                     }
                                 </div>
                             </div>

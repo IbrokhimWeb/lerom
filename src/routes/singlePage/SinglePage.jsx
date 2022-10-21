@@ -30,23 +30,23 @@ function SinglePage(props) {
 
     function createPost() {
         axios.post(`http://10.10.1.160:2004/api/`, {
-                id,
-                type,
-                model,
-                voloume,
-                sales_code,
-                weight,
-                v,
-                sh,
-                g,
-                sena,
-                value,
-            })
+            id,
+            type,
+            model,
+            voloume,
+            sales_code,
+            weight,
+            v,
+            sh,
+            g,
+            sena,
+            value,
+        })
             .then((response) => {
                 console.log(response.data.basket);
-            }).catch((e)=> console.log(`Xatolik\n ${e}`));
+            }).catch((e) => console.log(`Xatolik\n ${e}`));
     }
-console.log(image);
+    console.log(image);
     // useEffect(() => {
     //     setAddToBasket({ ...singleProduct, sena: singleProduct.sena, value })
     // }, [singleProduct, value]);
@@ -79,7 +79,7 @@ console.log(image);
                             <p>цвет</p>
                             <form className={s.form}>
                                 {
-                                    // api?.svet?.map((e, i) => <Radio name="radio" key={i} data={e} />)
+                                    api?.svet?.map((e, i) => <img className={s.img__item} key={i} src={`http://10.10.1.160:2004/${e}`} />)
                                 }
                             </form>
                         </div>
