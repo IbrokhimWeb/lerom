@@ -1,21 +1,23 @@
-import React from 'react';
-import s from "./Tovar.module.css";
+import React, { useContext } from 'react';
+import { ApiContext } from '../../context/ApiContext';
 import { Link } from 'react-router-dom';
+import s from "./Tovar.module.css";
 
 // Import data
 import { tovar } from "../../static/static";
 
 function Tovar(props) {
-    // console.log(props);
-    const { id, img, model, v, sh, g, svet, sena } = props?.data;
+    const api = useContext(ApiContext)
+    const { id, image, model, v, sh, g, sena } = props?.data;
+    // console.log(api);
     return (
         <>
             <section className={s.section}>
                 {
-                    props?.data && img && svet
+                    props.data
                         ?
                         <>
-                            <img src={img} alt="Tovar" /> {/**`http://10.10.1.160:2005${img}` */}
+                            <img src={`http://10.10.1.160:2005/media/${image}`} alt="Tovar" />
                             <div className={s.actions}>
                                 <div>
                                     <h1>{model}</h1>
@@ -24,7 +26,9 @@ function Tovar(props) {
                                 <div>
                                     <p>Цвет: дуб</p>
                                     <div className={s.images}>
-                                        {svet.map((e, i) => <img className={s.img__item} key={i} src={e.img} />)}
+                                        {
+                                            api?.svet?.map((e, i) => <img className={s.img__item} key={i} src={`http://10.10.1.160:2005/${e}`} />)
+                                        }
                                     </div>
                                 </div>
                                 <h1>{sena} ₽</h1>

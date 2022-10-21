@@ -1,21 +1,24 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { ApiContext } from '../../context/ApiContext';
 import s from "./Product.module.css";
 
 
 
 
 function Product(props) {
-    const { id, img, model, v, sh, svet, g, sena } = props.data;
+    const api = useContext(ApiContext);
+    const { id, image, model, v, sh, g, sena } = props.data;
+    // console.log(api);
 
     return (
         <>
             <section className={s.section}>
                 {
-                    props?.data && img && svet
+                    props.data
                         ?
                         <>
-                            <img src={img} alt="Tovar" /> {/**`http://10.10.1.160:2005${img}` */}
+                            <img src={`http://10.10.1.160:2005/media/${image}`} alt="Tovar" />
                             <div className={s.actions}>
                                 <div>
                                     <h1>{model}</h1>
@@ -25,7 +28,7 @@ function Product(props) {
                                     <p>Цвет: дуб</p>
                                     <div className={s.images}>
                                         {
-                                            svet?.map((e, i) => <img className={s.img__item} key={i} src={e.img} />)
+                                            api?.svet?.map((e, i) => <img className={s.img__item} key={i} src={`http://10.10.1.160:2005/${e}`} />)
                                         }
                                     </div>
                                 </div>

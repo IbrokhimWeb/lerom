@@ -24,11 +24,11 @@ function Home(props) {
                 <Carusel />
                 <div className={s.cards}>
                     {
-                        api?.card?.map((e, i) =>  <Card key={i} index={i} data={e} /> )
+                        api?.card?.map((e, i) => i < 2 && <Card key={i} index={i} data={e} /> )
                     }
                 </div>
                 {
-                    api?.card?.map((e, i)=> <EndCard key={i} data={e}/> )   
+                    api?.card?.map((e, i)=> i > 3 && <EndCard key={i} data={e}/> )   
                 }
                 <Video />
                 <div className={s.two__section}>
@@ -36,7 +36,7 @@ function Home(props) {
                 </div>
                 <div className={s.cards}>
                     {
-                        api?.card?.map((e, i) =>  <Card key={i} index={i} data={e} /> )
+                        api?.card?.map((e, i) => i > 1 && <Card key={i} index={i} data={e} /> )
                     }
                 </div>
                 <div className={s.two_section}>

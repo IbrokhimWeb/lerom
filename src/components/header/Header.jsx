@@ -10,7 +10,7 @@ import { BsTelephoneFill } from "react-icons/bs"
 
 function Header(props) {
     const api = useContext(ApiContext);
-    // console.log(api);
+    // console.log(api?.info);
     return (
         <>
             <header className={s.header}>
@@ -28,15 +28,15 @@ function Header(props) {
                     </div>
                 </div>
                 <Link to="/" className={s.brand}>
-                    <img className={s.header__logo} src={api?.info?.logo} alt="Logo" />
+                    <img className={s.header__logo} src={`http://10.10.1.160:2005/${api?.info?.logo}`} alt="Logo" />
                 </Link>
                 <div className={s.contacts}>
                     <div className={s.odel__prodaj}>
                         <p>Отдел продаж:</p>
                         <BsTelephoneFill className={s.headerPhone__icons}/>
                         <div className={s.phone__number}>
-                            <p>{api?.info?.sales[0]}</p>
-                            <p>{api?.info?.sales[1]}</p>
+                            {/* <p>{api?.info?.sales[0]}</p>
+                            <p>{api?.info?.sales[1]}</p> */}
                         </div>
                     </div>
                     <div className={s.russian__conversation}>

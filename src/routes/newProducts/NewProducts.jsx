@@ -39,7 +39,7 @@ function NewProducts(props) {
                 <div className={s.right}>
                     <p>{"Главная >> Гостиные >>"}<span> Коллекции</span></p>
                     {
-                        !togle ?
+                        togle ?
                             <>
                                 {/* <p className={s.router}>
                                     <Link to="/">{'Главная '}</Link> {' >> '}
@@ -48,7 +48,7 @@ function NewProducts(props) {
                                 </p> */}
                                 <div className={s.shaddow}>
                                     {
-                                        api?.card?.map((e, i) => <Card key={i} index={i} data={e} />)
+                                        api?.card?.map((e, i) => i < 2 && <Card key={i} index={i} data={e} />)
                                     }
                                 </div>
                             </>

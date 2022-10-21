@@ -14,8 +14,6 @@
 .card {
     width: 100%;
     display: flex;
-    /* justify-content: center; */
-    align-items: center;
 }
 
 .card > img{
@@ -26,7 +24,7 @@
     gap: 20px;
     width: 50%;
     display: flex;
-    padding: 60px;
+    padding: 40px;
     flex-direction: column;
 }
 
@@ -34,10 +32,12 @@
     gap: 20px;
     width: 50%;
     display: flex;
-    /* align-items: flex-end; */
-    /* text-align: end; */
-    padding: 60px;
+    padding: 40px;
     flex-direction: column;
+}
+
+.content2 > h1{
+    font-size: 1.5rem;
 }
 
 @media (max-width: 1900px) {

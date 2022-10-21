@@ -5,19 +5,31 @@ import s from "./Card.module.css";
 import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 import { Link } from 'react-router-dom';
 
-function Card(props) {
-    // const { id, title, img, price, description, cost } = props.data;
-    const { data } = props;
-    console.log(data);
+function Card({ data }) {
+    // console.log(data);
 
     return (
         <>
             {
-                data?.length > 1 && data[0].type == "usual" &&
+                data?.length > 1 &&
                 <>
                     <div className={s.card__item}>
                         <div className={s.card}>
-                            <img className={s.img} src={data[0].img} alt="photo" />
+                            {data[0].type == 'usual' ?
+                                <img
+                                    className={s.img}
+                                    style={{ height: "23rem" }}
+                                    src={`http://10.10.1.160:2005/media/${data[0].img}`}
+                                    alt="photo"
+                                />
+                                :
+                                <img
+                                    className={s.img}
+                                    // style={{ height: "23rem" }}
+                                    src={`http://10.10.1.160:2005/media/${data[0].img}`}
+                                    alt="photo"
+                                />
+                            }
                             <div className={s.content}>
                                 <h1>{data[0].title}</h1>
                                 <p>{data[0].description}</p>
@@ -38,7 +50,19 @@ function Card(props) {
                                     <BsArrowRightShort className={s.card_icons} />
                                 </Link>
                             </div>
-                            <img src={data[1].img} alt="photo" />
+                            {   data[1].type == "usual" ?
+                                <img
+                                    style={{ height: "23rem" }}
+                                    src={`http://10.10.1.160:2005/media/${data[1].img}`}
+                                    alt="photo"
+                                />
+                                :
+                                <img
+                                    // style={{ height: "50rem" }}
+                                    src={`http://10.10.1.160:2005/media/${data[1].img}`}
+                                    alt="photo"
+                                />
+                            }
                         </div>
                     </div>
                 </>
