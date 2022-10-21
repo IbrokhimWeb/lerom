@@ -7,7 +7,7 @@ import s from "./Basket.module.css";
 import BasketCard from "../../components/basketCard/BasketCard";
 
 function Basket(props) {
-    const api = useContext(ApiContext);
+    const {api} = useContext(ApiContext);
     // console.log(api);
     // console.log(api?.basket);
     return (
@@ -22,7 +22,11 @@ function Basket(props) {
                         <>
                             <div className={s.submit}>
                                 <h1>Итого: <span> {' 434 658'} ₽</span></h1>
-                                <Link className={s.button} to="/order">Оформить заказ</Link>
+                                <Link 
+                                    className={s.button} 
+                                    to="/order"
+                                    // onClick={()=>{}}
+                                >Оформить заказ</Link>
                             </div>
                         </>
                         :

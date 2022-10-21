@@ -28,7 +28,7 @@ function Header(props) {
                     </div>
                 </div>
                 <Link to="/" className={s.brand}>
-                    <img className={s.header__logo} src={`http://10.10.1.160:2005/${api?.info?.logo}`} alt="Logo" />
+                    <img className={s.header__logo} src={`http://10.10.1.160:2004/${api?.info?.logo}`} alt="Logo" />
                 </Link>
                 <div className={s.contacts}>
                     <div className={s.odel__prodaj}>

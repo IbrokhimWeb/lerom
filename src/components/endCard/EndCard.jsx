@@ -10,7 +10,7 @@ function EndCard({ data }) {
     return (
         <>
             <div className={s.card}>
-                <img src={`http://10.10.1.160:2005/media/${img}`} alt="photo" />
+                <img src={`http://10.10.1.160:2004/media/${img}`} alt="photo" />
                 <div className={s.content}>
                     <h1>{title}</h1>
                     <p>{description}</p>

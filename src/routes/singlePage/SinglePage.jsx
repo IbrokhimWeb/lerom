@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
+import axios from 'axios';
 import { ApiContext } from '../../context/ApiContext';
 import { useParams } from 'react-router-dom';
 import s from "./SinglePage.module.css";
@@ -17,7 +18,7 @@ import Tovar from "../../components/tovar/Tovar";
 function SinglePage(props) {
     const api = useContext(ApiContext);
     const [value, setValue] = useState(1);
-    const [addToBasket, setAddToBasket] = useState({});
+    // const [addToBasket, setAddToBasket] = useState({});
 
 
 
@@ -25,36 +26,37 @@ function SinglePage(props) {
     // const 
     const allProducts = [...api.product];
     const singleProduct = allProducts.find(e => e.id === +id);
-    const { img, model, sales_code, weight, v, sh, g, svet, sena } = singleProduct;
+    const { image, type, model, voloume, sales_code, weight, v, sh, g, svet, sena } = singleProduct;
 
-
-
-
-    useEffect(() => {
-        setAddToBasket({ ...singleProduct, sena: singleProduct.sena, value })
-    }, [singleProduct, value]);
-
-
-    // const addBasket = () => {
-    //     const url = `api_url`;
-    //     const { img, model, sales_code, weight, v, sh, g, svet, sena } = addToBasket;
-    //     fatch( url, {
-    //         method: 'POST',
-    //         headers: {
-    //             'Content-Type': 'application/jison'
-    //         },
-    //         body: JSON.stringify({ img, model, sales_code, weight, v, sh, g, svet, sena })
-    //     })
-    //         .then(res => res.json())
-    //         .then(data => console.log(data))
-    // }
+    function createPost() {
+        axios.post(`http://10.10.1.160:2004/api/`, {
+                id,
+                type,
+                model,
+                voloume,
+                sales_code,
+                weight,
+                v,
+                sh,
+                g,
+                sena,
+                value,
+            })
+            .then((response) => {
+                console.log(response.data.basket);
+            }).catch((e)=> console.log(`Xatolik\n ${e}`));
+    }
+console.log(image);
+    // useEffect(() => {
+    //     setAddToBasket({ ...singleProduct, sena: singleProduct.sena, value })
+    // }, [singleProduct, value]);
 
     return (
         <>
             <div className={s.container}>
                 <header className={s.header}>
                     <div className={s.product__img}>
-                        <img src={img} alt="photo" />
+                        <img src={`http://10.10.1.160:2004/media/${image}`} alt="photo" />
                     </div>
                     <div className={s.filter}>
                         <p>{"Главная >> Гостиные >>"}<span>{"Коллекции"}</span></p>
@@ -77,7 +79,7 @@ function SinglePage(props) {
                             <p>цвет</p>
                             <form className={s.form}>
                                 {
-                                    svet?.map((e, i) => <Radio name="radio" key={i} data={e} />)
+                                    // api?.svet?.map((e, i) => <Radio name="radio" key={i} data={e} />)
                                 }
                             </form>
                         </div>
@@ -92,7 +94,7 @@ function SinglePage(props) {
                         </div>
                         <button
                             className={s.button}
-                            onClick={() => { api?.basket?.push(addToBasket) }}
+                            onClick={createPost}
                         >Купить</button>
                     </div>
                     <div className={s.axsia}>

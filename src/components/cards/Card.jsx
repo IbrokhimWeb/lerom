@@ -19,14 +19,14 @@ function Card({ data }) {
                                 <img
                                     className={s.img}
                                     style={{ height: "23rem" }}
-                                    src={`http://10.10.1.160:2005/media/${data[0].img}`}
+                                    src={`http://10.10.1.160:2004/media/${data[0].img}`}
                                     alt="photo"
                                 />
                                 :
                                 <img
                                     className={s.img}
                                     // style={{ height: "23rem" }}
-                                    src={`http://10.10.1.160:2005/media/${data[0].img}`}
+                                    src={`http://10.10.1.160:2004/media/${data[0].img}`}
                                     alt="photo"
                                 />
                             }
@@ -53,13 +53,13 @@ function Card({ data }) {
                             {   data[1].type == "usual" ?
                                 <img
                                     style={{ height: "23rem" }}
-                                    src={`http://10.10.1.160:2005/media/${data[1].img}`}
+                                    src={`http://10.10.1.160:2004/media/${data[1].img}`}
                                     alt="photo"
                                 />
                                 :
                                 <img
                                     // style={{ height: "50rem" }}
-                                    src={`http://10.10.1.160:2005/media/${data[1].img}`}
+                                    src={`http://10.10.1.160:2004/media/${data[1].img}`}
                                     alt="photo"
                                 />
                             }

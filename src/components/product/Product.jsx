@@ -18,7 +18,7 @@ function Product(props) {
                     props.data
                         ?
                         <>
-                            <img src={`http://10.10.1.160:2005/media/${image}`} alt="Tovar" />
+                            <img src={`http://10.10.1.160:2004/media/${image}`} alt="Tovar" />
                             <div className={s.actions}>
                                 <div>
                                     <h1>{model}</h1>
@@ -28,7 +28,7 @@ function Product(props) {
                                     <p>Цвет: дуб</p>
                                     <div className={s.images}>
                                         {
-                                            api?.svet?.map((e, i) => <img className={s.img__item} key={i} src={`http://10.10.1.160:2005/${e}`} />)
+                                            api?.svet?.map((e, i) => <img className={s.img__item} key={i} src={`http://10.10.1.160:2004/${e}`} />)
                                         }
                                     </div>
                                 </div>

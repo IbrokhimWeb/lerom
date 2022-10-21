@@ -39,7 +39,7 @@ function NewProducts(props) {
                 <div className={s.right}>
                     <p>{"Главная >> Гостиные >>"}<span> Коллекции</span></p>
                     {
-                        togle ?
+                        !togle ?
                             <>
                                 {/* <p className={s.router}>
                                     <Link to="/">{'Главная '}</Link> {' >> '}
