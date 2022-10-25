@@ -9,14 +9,14 @@ import { MdDeleteForever } from "react-icons/md";
 import Radio from "../radio/Radio";
 
 function BasketCard(props) {
-    const { id, image, model, v, sh, g, svet, sena, value } = props.data;
+    const { id, img, model, v, sh, g, svet, sena, value } = props.data;
     const [val, setVal] = useState(value);
     // console.log(props.data);
     return (
         <>
             <section className={s.section}>
                 <div className={s.about}>
-                    <img src={`http://10.10.1.160:2004/media/${image}`} alt="tovar" /> {/**`http://10.10.1.160:2005${img}` */}
+                    <img src={img} alt="tovar" /> {/**`http://10.10.1.160:2005${img}` */}
                     <div className={s.model}>
                         <h1>{model}</h1>
                         <p>Pазмер: <span>{`в ${v} ш ${sh} г ${g} `}</span></p>

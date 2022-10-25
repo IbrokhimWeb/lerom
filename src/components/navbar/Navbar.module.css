@@ -17,7 +17,7 @@
 .nav__select {
     outline: none;
     border: none;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: var(--brown);
     font-weight: 700;
 }
@@ -36,6 +36,7 @@
 }
 
 .Link {
+    font-weight: 500;
     color: var(--black);
 }
 

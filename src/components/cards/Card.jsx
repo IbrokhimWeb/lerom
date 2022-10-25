@@ -15,21 +15,10 @@ function Card({ data }) {
                 <>
                     <div className={s.card__item}>
                         <div className={s.card}>
-                            {data[0].type == 'usual' ?
-                                <img
-                                    className={s.img}
-                                    style={{ height: "23rem" }}
-                                    src={`http://10.10.1.160:2004/media/${data[0].img}`}
-                                    alt="photo"
-                                />
-                                :
-                                <img
-                                    className={s.img}
-                                    // style={{ height: "23rem" }}
-                                    src={`http://10.10.1.160:2004/media/${data[0].img}`}
-                                    alt="photo"
-                                />
-                            }
+                            
+                                <img className={s.img} src={data[0].img} alt="photo"/>
+                               
+                            {/**`http://10.10.1.160:2004/media/${data[0].img}` */}
                             <div className={s.content}>
                                 <h1>{data[0].title}</h1>
                                 <p>{data[0].description}</p>
@@ -53,16 +42,16 @@ function Card({ data }) {
                             {   data[1].type == "usual" ?
                                 <img
                                     style={{ height: "23rem" }}
-                                    src={`http://10.10.1.160:2004/media/${data[1].img}`}
+                                    src={data[1].img}
                                     alt="photo"
                                 />
                                 :
                                 <img
                                     // style={{ height: "50rem" }}
-                                    src={`http://10.10.1.160:2004/media/${data[1].img}`}
+                                    src={/**http://10.10.1.160:2004/media/ */`${data[1].img}`}
                                     alt="photo"
                                 />
-                            }
+                            } 
                         </div>
                     </div>
                 </>
