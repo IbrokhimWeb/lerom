@@ -3,6 +3,8 @@ import { Routes, Route, Link, } from "react-router-dom";
 import axios from "axios";
 import s from "./App.module.css";
 
+import { api } from "./static/static"
+
 // Import React icons
 import { FaCartPlus } from "react-icons/fa";
 import { ApiContext } from "./context/ApiContext";
@@ -20,7 +22,7 @@ import Order from "./routes/order/Order";
 
 
 function App() {
-    const [ data, setData] = useState({});
+    const [ data, setData] = useState({api});
     // console.log(data);
 
     useEffect(() => {
