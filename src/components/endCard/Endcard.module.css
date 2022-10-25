@@ -11,8 +11,31 @@
 .content{
     gap: 20px;
     display: flex;
-    padding: 0 60px;
+    padding: 0 40px;
+    position: relative;
     flex-direction: column;
+    justify-content: center;
+}
+
+.triangle{
+    top: 5px;
+    left: -29px;
+    position: absolute;
+	border-top: 15px solid transparent;
+	border-right: 30px solid var(--white);
+	border-bottom: 15px solid transparent;
+}
+
+.content > h1{
+    text-transform: uppercase;
+}
+
+.content > p{
+    width: 350px;
+}
+
+.blue{
+    color: var(--dark-blue);
 }
 
 .card_icons{
@@ -24,16 +47,6 @@
     border-radius: 50%;
 }
 
-/* 
-@media (max-width: 1900px) {
-    .card {
-        width: 79%;
-    }
+@media (max-width: 480px) {
 
-    .content{
-        padding:0 60px;
-    }
-} */
-
-
-
+}

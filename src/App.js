@@ -3,6 +3,7 @@ import { Routes, Route, Link, } from "react-router-dom";
 import axios from "axios";
 import s from "./App.module.css";
 
+// Import Static data
 import { api } from "./static/static"
 
 // Import React icons
@@ -22,13 +23,15 @@ import Order from "./routes/order/Order";
 
 
 function App() {
-    const [ data, setData] = useState({api});
+    const [ data, setData] = useState({});
+
     // console.log(data);
 
     useEffect(() => {
-        axios.get(`http://10.10.1.160:2004/api/`)
-            .then(res => setData(res?.data))
-            .catch(err => console.log(`Nimadir xato ketdi\n ${err}`))
+        setData(api);
+        // axios.get(`http://10.10.1.160:2004/api/`)
+        //     .then(res => setData(res?.data))
+        //     .catch(err => console.log(`Nimadir xato ketdi\n ${err}`))
     }, []);
 
     return (

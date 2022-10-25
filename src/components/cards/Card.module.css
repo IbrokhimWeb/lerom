@@ -1,14 +1,14 @@
-.card__item{
+.card__item {
     width: 100%;
 }
 
-.card_icons{
-    box-sizing: content-box;
+.card_icons {
     padding: 10px;
-    color: var(--dark-blue);
     font-size: 2rem;
-    border: 1px solid var(--dark-blue);
     border-radius: 50%;
+    color: var(--dark-blue);
+    box-sizing: content-box;
+    border: 1px solid var(--dark-blue);
 }
 
 .card {
@@ -16,11 +16,57 @@
     display: flex;
 }
 
-.card > img{
+.card>img {
     width: 50%;
 }
 
-.content{
+.content,
+.content2 {
+    gap: 20px;
+    width: 50%;
+    display: flex;
+    padding: 40px;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content > span{
+    top: 80px;
+    left: -29px;
+    position: absolute;
+	border-top: 15px solid transparent;
+	border-right: 30px solid var(--white);
+	border-bottom: 15px solid transparent;
+}
+
+.content2 > span{
+    top: 80px;
+    right: -29px;
+    position: absolute;
+	border-top: 15px solid transparent;
+	border-left: 30px solid var(--white);
+	border-bottom: 15px solid transparent;
+}
+
+.content>p {
+    font-size: 20px;
+}
+
+.blue {
+    color: var(--dark-blue);
+}
+
+.content2>p {
+    font-size: 20px;
+}
+
+.content>h1 {
+    font-size: 26px;
+    text-transform: uppercase;
+}
+
+.content2 {
     gap: 20px;
     width: 50%;
     display: flex;
@@ -28,91 +74,7 @@
     flex-direction: column;
 }
 
-.content2{
-    gap: 20px;
-    width: 50%;
-    display: flex;
-    padding: 40px;
-    flex-direction: column;
-}
-
-.content2 > h1{
-    font-size: 1.5rem;
-}
-
-@media (max-width: 1900px) {
-    .card > img{
-        width: 50%;
-    }
-
-    .content{
-        width: 50%;
-        padding:20px 60px;
-
-    }
-}
-
-@media (max-width: 1590px) {
-    .content > h1{
-        font-size: 1.5rem;
-    }
-
-    .content > p{
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 1590px) {
-    .content > h1{
-        font-size: 1.5rem;
-    }
-
-    .content > p{
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 1050px) {
-    .content{
-        gap: 3px;
-        padding:20px 30px;
-    }
-    .content > h1{
-        font-size: 2rem;
-    }
-
-    .content > p{
-        font-size: 1.2rem;
-    }
-}
-
-@media (max-width: 720px) {
-    .content{
-        padding: 20px;
-    }
-    .content > h1{
-        font-size: 1.2rem;
-    }
-
-    .content > p{
-        font-size: 0.7rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .card_icons{
-        padding: 5px;
-        font-size: 1.5rem;
-    }
-
-    .content{
-        padding: 10px;
-    }
-    .content > h1{
-        font-size: 1rem;
-    }
-
-    .content > p{
-        font-size: 0.5rem;
-    }
+.content2>h1 {
+    font-size: 24px;
+    text-transform: uppercase;
 }

@@ -1,10 +1,11 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import s from "./Video.module.css"
 
 // Import React icons
 import { BsPlayCircle } from "react-icons/bs";
 
-function Video(props) {
+function Video() {
+
     return (
         <>
             <section className={s.video}>

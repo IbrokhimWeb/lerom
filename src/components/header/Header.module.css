@@ -1,18 +1,18 @@
 .header {
     width: 100%;
-    height: 130px;
+    height: 120px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom:1px solid #EFEFEF;
     padding: 10px 100px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom:1px solid #EFEFEF;
 
 }
 
 .working__time {
+    gap: 5px;
     display: flex;
     justify-content: center;
-    gap: 5px;
 }
 
 .header__logo {
@@ -20,21 +20,25 @@
 }
 
 .header__icons {
-    color: var(--dark-blue);
     font-size: 1.5rem;
+    color: var(--dark-blue);
 }
 
 .working__time__item {
+    font-size: 16px;
     font-weight: 600;
     line-height: 20.4px;
-    font-size: 16px;
+}
+
+.working__time__item > p{
+    font-weight: 500;
 }
 
 .our__salons {
-    display: flex;
-    align-items: center;
     gap: 5px;
+    display: flex;
     font-weight: 500;
+    align-items: center;
 
 }
 
@@ -50,8 +54,8 @@
 
 .contacts {
     display: flex;
-    flex-direction: column;
     align-items: flex-end;
+    flex-direction: column;
     gap: 10px;
 }
 
@@ -61,16 +65,21 @@
 }
 
 .headerPhone__icons {
-    box-sizing: content-box;
     padding: 0 5px;
     margin-top: 4px;
+    box-sizing: content-box;
 }
 
 .phone__number{
     font-weight: 600;
 }
 
+.phone__number > p{
+    font-weight: 500;
+}
+
 .phone__number > h4{
+    font-weight: 500;
     color: var(--brown);
 }
 
@@ -79,8 +88,26 @@
     justify-content: center;
 }
 
-@media (max-width: 1290px) {
-    .header{
+.open__close{
+    display: none;
+    font-size: 3rem;
+    fill: var(--dark-blue);
+}
+
+@media (max-width: 1050px) {
+    .working__time,
+    .contacts{
         display: none;
     }
+
+    .open__close{
+        display: inline-block;
+    }
+}
+
+
+
+
+@media (max-width: 480px) {
+
 }

@@ -17,7 +17,7 @@
 .nav__select {
     outline: none;
     border: none;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: var(--brown);
     font-weight: 700;
 }
@@ -36,6 +36,7 @@
 }
 
 .Link {
+    font-weight: 500;
     color: var(--black);
 }
 
@@ -67,25 +68,6 @@
     margin: 0 10px 0 -30px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 1370px) {
     .nav__input>input {
         width: 230px;
@@ -95,4 +77,12 @@
     .navbar{
         display: none;
     }
+}
+
+
+
+
+
+@media (max-width: 480px) {
+
 }

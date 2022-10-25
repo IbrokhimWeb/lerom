@@ -107,38 +107,6 @@ export const api = {
         ],
         [
             {
-                id: 1,
-                type: "Information",
-                title: "Доставка по всей России",
-                description: "Мини текст описания новости ее актуальности",
-                img: card1,
-            },
-            {
-                id: 2,
-                type: "Information",
-                title: "Бесплатная сборка",
-                description: "Мини текст описания новости и ее актуальности",
-                img: card2,
-            }
-        ],
-        [
-            {
-                id: 3,
-                type: "interesting",
-                title: "Как выбрать матрас",
-                description: "Мини текст описания новости ее актуальности",
-                img: card1,
-            },
-            {
-                id: 4,
-                type: "interesting",
-                title: "Какой шкаф выбрать в 2022 году",
-                description: "Мини текст описания новости и ее актуальности",
-                img: card2,
-            }
-        ],
-        [
-            {
                 id: 5,
                 type: "alone",
                 title: "Кровати",

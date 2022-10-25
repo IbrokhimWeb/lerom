@@ -11,38 +11,6 @@
     grid-template-columns: auto auto;
 }
 
-.two__section{
-    width: 100%;
-    height: 60px;
-    display: flex;
-    text-transform: uppercase;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.two__section > h2 ,
-.two_section > h2 {
-    font-weight: 400;
-    width: 450px;
-    text-align: center;
-}
-
-.two_section > p {
-    width: 450px;
-    font-weight: 400;
-    color: gray;
-    text-align: center;
-}
-
-.two_section{
-    width: 100%;
-    height: 60px;
-    display: flex;
-    text-transform: uppercase;
-    justify-content: space-around;
-    align-items: center;
-}
-
 @media (max-width: 1500px) {
     .cards {
         grid-template-columns: auto;

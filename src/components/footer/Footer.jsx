@@ -7,8 +7,10 @@ import { GiWaterRecycling } from "react-icons/gi";
 // Import assets
 import logo from "../../assets/logo.png";
 import pragnoz1 from "../../assets/pragnoz1.png";
-import pragnoz2 from "../../assets/pragnoz2.png"
-function Footer(props) {
+import pragnoz2 from "../../assets/pragnoz2.png";
+
+function Footer() {
+
     return (
         <>
             <footer className={s.footer}>
@@ -23,6 +25,7 @@ function Footer(props) {
                         </h1>
                     </div>
                 </section>
+
                 <div className={s.main__footer}>
                     <div className={s.footer__start}>
                         <div className={s.bloks}>

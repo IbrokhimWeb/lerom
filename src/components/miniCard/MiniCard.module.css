@@ -1,0 +1,131 @@
+.section{
+    width: 100%;
+}
+
+.two__section {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    justify-content: space-around;
+}
+
+.two__section>h2,
+.two_section>h2 {
+    width: 450px;
+    font-weight: 400;
+    text-align: center;
+    color: var(--dark-blue);
+}
+
+.two_section>p {
+    width: 450px;
+    color: gray;
+    font-weight: 400;
+    text-align: center;
+}
+
+.two_section {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    justify-content: space-around;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.card__item {
+    width: 100%;
+}
+
+.card_icons {
+    padding: 20px;
+    font-size: 2rem;
+    margin-top: 40px;
+    border-radius: 50%;
+    color: var(--brown);
+    box-sizing: content-box;
+    border: 1px solid var(--brown);
+}
+
+.card {
+    width: 100%;
+    display: flex;
+}
+
+.card>img {
+    width: 50%;
+    height: 20rem;
+}
+
+.content,
+.content2 {
+    gap: 30px;
+    width: 50%;
+    height: 20rem;
+    display: flex;
+    padding: 40px;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content>span {
+    top: 30px;
+    left: -29px;
+    position: absolute;
+    border-top: 15px solid transparent;
+    border-right: 30px solid var(--white);
+    border-bottom: 15px solid transparent;
+}
+
+.content2>span {
+    top: 30px;
+    right: -29px;
+    position: absolute;
+    border-top: 15px solid transparent;
+    border-left: 30px solid var(--white);
+    border-bottom: 15px solid transparent;
+}
+
+.content>p {
+    font-size: 20px;
+}
+
+.blue {
+    color: var(--dark-blue);
+}
+
+.content2>p {
+    font-size: 20px;
+}
+
+.content>h1 {
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.content2>h1 {
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 1500px) {
+    .cards {
+        grid-template-columns: auto;
+    }
+
+    .card>img {
+        height: 30rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+}
