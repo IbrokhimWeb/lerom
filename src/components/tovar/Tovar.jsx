@@ -8,7 +8,7 @@ import { tovar } from "../../static/static";
 
 function Tovar(props) {
     const api = useContext(ApiContext)
-    const { id, image, model, v, sh, g, sena } = props?.data;
+    const { id, img, model, v, sh, g, sena } = props?.data;
     // console.log(api);
     return (
         <>
@@ -17,7 +17,7 @@ function Tovar(props) {
                     props.data
                         ?
                         <>
-                            <img src={`http://10.10.1.160:2004/media/${image}`} alt="Tovar" />
+                            <img src={`${img}`} alt="Tovar" />
                             <div className={s.actions}>
                                 <div>
                                     <h1>{model}</h1>

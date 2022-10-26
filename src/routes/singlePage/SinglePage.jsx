@@ -26,7 +26,7 @@ function SinglePage(props) {
     // const 
     const allProducts = [...api.product];
     const singleProduct = allProducts.find(e => e.id === +id);
-    const { image, type, model, voloume, sales_code, weight, v, sh, g, sena } = singleProduct;
+    const { img, type, model, voloume, sales_code, svet, weight, v, sh, g, sena } = singleProduct;
 
     function createPost() {
         axios.post(`http://10.10.1.160:2004/api/`, { ...singleProduct, sena: singleProduct.sena, value })
@@ -41,7 +41,7 @@ function SinglePage(props) {
             <div className={s.container}>
                 <header className={s.header}>
                     <div className={s.product__img}>
-                        <img src={`http://10.10.1.160:2004/media/${image}`} alt="photo" />
+                        <img src={`${img}`} alt="photo" />
                     </div>
                     <div className={s.filter}>
                         <p>{"Главная >> Гостиные >>"}<span>{"Коллекции"}</span></p>
@@ -64,7 +64,7 @@ function SinglePage(props) {
                             <p>цвет</p>
                             <form className={s.form}>
                                 {
-                                    api?.svet?.map((e, i) => <img className={s.img__item} key={i} src={`http://10.10.1.160:2004/${e}`} />)
+                                    api?.svet?.map((e, i) => <Radio className={s.img__item} key={i} src={`${e}`} />)
                                 }
                             </form>
                         </div>

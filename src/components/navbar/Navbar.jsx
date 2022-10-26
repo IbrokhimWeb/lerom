@@ -10,14 +10,14 @@ import { BiSearchAlt } from "react-icons/bi"
 
 function Navbar(props) {
     const api = useContext(ApiContext);
-
-    const [ togle, setTogle] = useState(true);
+    
+    // const [ togle, setTogle] = useState(true);
     return (
         <>
             <nav className={s.navbar}>
                 <section className={s.pages}>
                     <ul>
-                        <select id="nav__select" className={s.nav__select}>
+                        <select className={s.nav__select}>
                             <option >Каталог</option>
                             <option >Каталог 2</option>
                         </select>
@@ -36,8 +36,8 @@ function Navbar(props) {
                     </ul>
                 </section>
                 <div className={s.nav__input}>
-                    <input type="text" placeholder="Поиск по сайту..."/>
-                    <BiSearchAlt className={s.imput__icons}/>
+                    <input type="text" placeholder="Поиск по сайту..." />
+                    <BiSearchAlt className={s.imput__icons} />
                 </div>
             </nav>
         </>
