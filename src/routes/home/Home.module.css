@@ -11,7 +11,7 @@
     grid-template-columns: auto auto;
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1810px) {
     .cards {
         grid-template-columns: auto;
     }

@@ -8,7 +8,7 @@ import s from "./Product.module.css";
 
 function Product(props) {
     const api = useContext(ApiContext);
-    const { id, image, model, v, sh, g, sena } = props.data;
+    const { id, img, model, v, sh, g, sena } = props.data;
     // console.log(api);
 
     return (
@@ -18,7 +18,7 @@ function Product(props) {
                     props.data
                         ?
                         <>
-                            <img src={`http://10.10.1.160:2004/media/${image}`} alt="Tovar" />
+                            <img src={/* `http://10.10.1.160:2004/media/` */img} alt="Tovar" />
                             <div className={s.actions}>
                                 <div>
                                     <h1>{model}</h1>

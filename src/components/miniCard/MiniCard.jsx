@@ -59,6 +59,9 @@ function MiniCard() {
                     {// Yaratib olgan datamni map() metodi orqali birma bir codega uzatdim
                         data.map((e, i) =>
                             <div key={i}>
+                                {
+                                    i % 2 == 0 ? <h2 id={s.information}>Информация</h2> : <h2 id={s.interesno}>Интересное</h2>
+                                }
                                 <div className={s.card__item} >
                                     <div className={s.card}>
                                         <img className={s.img} src={e[0].img} alt="photo" /> { }

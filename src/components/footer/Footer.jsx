@@ -46,14 +46,27 @@ function Footer() {
                             <a href="#">Всё о фурнитуре</a>
                             <a href="#">Всё о ЛДСП</a>
                         </div>
-                        <div className={s.bloks}>
+                        <div id={s.bloks} className={s.bloks}>
                             <h1>3D-моделирование</h1>
                             <p>Запустить онлайн, <br /> от 2 Мбит/с</p>
                             <p>Скачать на компьютер, <br /> 606 Мб</p>
                         </div>
-                        <div className={s.link}>
+                        <div></div>
+                        <div id={s.bloks} className={s.link}>
                             <a href="#">Рассрочка</a>
                             <a href="#">Гарантия</a>
+                            <a href="#">Контакты</a>
+                        </div>
+
+                        <div id={s.bloks} className={s.prophecy}>
+                            <img src={pragnoz1} alt="photo" />
+                            <img src={pragnoz2} alt="photo" />
+                        </div>
+                    </div>
+                    <div className={s.footer__end__item}>
+                        <div className={s.link}>
+                            <a href="#">Рассрочка</a>
+                            <a id={s.border} href="#">Гарантия</a>
                             <a href="#">Контакты</a>
                         </div>
                         <div className={s.prophecy}>
@@ -65,6 +78,13 @@ function Footer() {
                         <p>
                             Все права защищены. Любое копирование и использование материалов сайта разрешено только с письменного согласия правообладателя. Не является публичной офертой.
                         </p>
+                    </div>
+                    <div className={s.creator__end}>
+                        <p>Сайт разработан  -</p>
+                        <h1>E S V
+                            <GiWaterRecycling className={s.reverse__icon} />
+                            <span>digital</span>
+                        </h1>
                     </div>
                 </div>
             </footer>
