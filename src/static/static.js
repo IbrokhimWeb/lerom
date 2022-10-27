@@ -63,7 +63,7 @@ export const savat = [
 
 export const api = {
     basket: [
-
+        
     ],
     product: [
         {
@@ -247,21 +247,7 @@ export const api = {
             g: 7654,
             svet: [color1, color2, color3, color4, color5, color1, color2, color3],
             sena: 7348
-        },
-        {
-            id: 13,
-            img: tovar1,
-            type: "tovar",
-            model: "АН-2801",
-            voloume: 24,
-            sales_code: 34235234523,
-            weight: 234234,
-            v: 4562,
-            sh: 678,
-            g: 7654,
-            svet: [color1, color2, color3, color4, color5, color1, color2, color3],
-            sena: 7348
-        },
+        }
     ],
 
     card: [
