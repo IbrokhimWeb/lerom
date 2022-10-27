@@ -8,7 +8,7 @@ import s from "./Product.module.css";
 
 function Product(props) {
     const api = useContext(ApiContext);
-    const { id, img, model, v, sh, g, sena } = props.data;
+    const { id, img, model, v, sh, g, sena, svet } = props.data;
     // console.log(api);
 
     return (
@@ -28,7 +28,7 @@ function Product(props) {
                                     <p>Цвет: дуб</p>
                                     <div className={s.images}>
                                         {
-                                            api?.svet?.map((e, i) => <img className={s.img__item} key={i} src={/*http://10.10.1.160:2004/*/`${e}`} />)
+                                            svet?.map((e, i) => <img name={id} key={i} src={e} />)
                                         }
                                     </div>
                                 </div>

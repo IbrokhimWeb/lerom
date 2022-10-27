@@ -41,11 +41,6 @@ function NewProducts(props) {
                     {
                         !togle ?
                             <>
-                                {/* <p className={s.router}>
-                                    <Link to="/">{'Главная '}</Link> {' >> '}
-                                    <Link to="/new">{' Гостиные '}</Link> {' >> '}
-                                    <span>Коллекции</span>
-                                </p> */}
                                 <div className={s.shaddow}>
                                     {
                                         api?.card?.map((e, i) => i < 2 && <Card key={i} index={i} data={e} />)
@@ -54,11 +49,6 @@ function NewProducts(props) {
                             </>
                             :
                             <>
-                                {/* <p className={s.router}>
-                                    <Link to="/">{'Главная '}</Link> {' >> '}
-                                    <Link to="/new">{' Гостиные '}</Link> {' >> '}
-                                    <span>Коллекции</span>
-                                </p> */}
                                 <div className={s.block}>
                                     <Compositions />
                                 </div>

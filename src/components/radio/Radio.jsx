@@ -8,9 +8,9 @@ function Radio({ data , name}) {
     return (
         <>
             <li>
-                <input className={s.input} type="radio" name={name} id={uuid} />
+                <input className={s.input} type="radio" name={name ? name : ''} id={uuid} />
                 <label className={s.label} htmlFor={uuid} ></label>
-                <img className={s.checkbox__img} src={data.img} />
+                <img className={s.checkbox__img} src={data} />
             </li>
         </>
     );

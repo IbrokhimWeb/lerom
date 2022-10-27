@@ -85,7 +85,7 @@
 }
 
 .calc {
-    gap: 40px;
+    width: 450px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -102,7 +102,6 @@
 }
 
 .inc__dec {
-    gap: 10px;
     padding: 10px;
     display: flex;
     font-size: 1.5rem;
@@ -122,9 +121,7 @@
     padding: 15px;
     font-size: 1rem;
     cursor: pointer;
-    border-radius: 50%;
     box-sizing: content-box;
-    border: 1px solid var(--black);
 }
 
 .button {

@@ -4,8 +4,10 @@ import { ApiContext } from '../../context/ApiContext';
 import { useParams } from 'react-router-dom';
 import s from "./SinglePage.module.css";
 
+// Import static data
+
 // Import React Icons
-import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
+import { VscTriangleDown, VscTriangleUp } from "react-icons/vsc";
 
 // Import Components
 import Payment from '../../components/payment/Payment';
@@ -28,13 +30,18 @@ function SinglePage(props) {
     const singleProduct = allProducts.find(e => e.id === +id);
     const { img, type, model, voloume, sales_code, svet, weight, v, sh, g, sena } = singleProduct;
 
-    function createPost() {
-        axios.post(`http://10.10.1.160:2004/api/`, { ...singleProduct, sena: singleProduct.sena, value })
-            .then((response) => {
-                console.log(response.data.basket);
-            }).catch((e) => console.log(`Xatolik\n ${e}`));
-    }
-    console.log();
+    const heandlePush = () => {
+        console.log({ ...singleProduct, sena: singleProduct.sena, value });
+    };
+
+    // function createPost() {
+    //     axios.post(`http://10.10.1.160:2004/api/`, {})
+    //         .then((response) => {
+    //             console.log(response.data.basket);
+    //         }).catch((e) => console.log(`Xatolik\n ${e}`));
+    // }
+
+    
 
     return (
         <>
@@ -64,22 +71,22 @@ function SinglePage(props) {
                             <p>цвет</p>
                             <form className={s.form}>
                                 {
-                                    api?.svet?.map((e, i) => <Radio className={s.img__item} key={i} src={`${e}`} />)
+                                    svet?.map((e, i) => <Radio name={id} key={i} data={e} />)
                                 }
                             </form>
                         </div>
                         <hr className={s.hr} />
                         <div className={s.calc}>
-                            <h2>Цена: <span>{sena * value} ₽</span></h2>
+                            <h2>Цена: <span>{sena * value < 1000000 ? sena * value : '1 M+'} ₽</span></h2>
                             <div className={s.inc__dec}>
-                                <AiOutlineMinus className={s.inc__dec__icons} onClick={() => value > 1 ? setValue(value - 1) : setValue(value)} />
+                                <VscTriangleDown className={s.inc__dec__icons} onClick={() => value > 1 ? setValue(value - 1) : setValue(value)} />
                                 <p> {value} </p>
-                                <AiOutlinePlus className={s.inc__dec__icons} onClick={() => setValue(value + 1)} />
+                                <VscTriangleUp className={s.inc__dec__icons} onClick={() => setValue(value + 1)} />
                             </div>
                         </div>
                         <button
                             className={s.button}
-                            onClick={createPost}
+                            onClick={heandlePush}
                         >Купить</button>
                     </div>
                     <div className={s.axsia}>

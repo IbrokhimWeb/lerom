@@ -30,9 +30,41 @@ export const select = [
     ["Кровати"],
     ["Матрасы"]
 ];
+export const savat = [
+    {
+        id: 1,
+        img: product1,
+        type: "product",
+        model: "Мелисса композиция 1",
+        voloume: 12,
+        sales_code: 34235234523,
+        weight: 234234,
+        v: 1462,
+        sh: 360,
+        g: 352,
+        svet: [color1, color2, color3, color4, color5, color1, color2, color3],
+        sena: 6284
+    },
+    {
+        id: 7,
+        img: tovar1,
+        type: "tovar",
+        model: "АН-2801",
+        voloume: 24,
+        sales_code: 34235234523,
+        weight: 234234,
+        v: 4562,
+        sh: 678,
+        g: 7654,
+        svet: [color1, color2, color3, color4, color5, color1, color2, color3],
+        sena: 7348
+    },
+];
 
 export const api = {
-    basket: [],
+    basket: [
+
+    ],
     product: [
         {
             id: 1,
@@ -49,7 +81,175 @@ export const api = {
             sena: 6284
         },
         {
+            id: 1,
+            img: product1,
+            type: "product",
+            model: "Мелисса композиция 1",
+            voloume: 12,
+            sales_code: 34235234523,
+            weight: 234234,
+            v: 1462,
+            sh: 360,
+            g: 352,
+            svet: [color1, color2, color3, color4, color5, color1, color2, color3],
+            sena: 6284
+        },
+        {
             id: 2,
+            img: product1,
+            type: "product",
+            model: "Мелисса композиция 1",
+            voloume: 12,
+            sales_code: 34235234523,
+            weight: 234234,
+            v: 1462,
+            sh: 360,
+            g: 352,
+            svet: [color1, color2, color3, color4, color5, color1, color2, color3],
+            sena: 6284
+        },
+        {
+            id: 3,
+            img: product1,
+            type: "product",
+            model: "Мелисса композиция 1",
+            voloume: 12,
+            sales_code: 34235234523,
+            weight: 234234,
+            v: 1462,
+            sh: 360,
+            g: 352,
+            svet: [color1, color2, color3, color4, color5, color1, color2, color3],
+            sena: 6284
+        },
+        {
+            id: 4,
+            img: product1,
+            type: "product",
+            model: "Мелисса композиция 1",
+            voloume: 12,
+            sales_code: 34235234523,
+            weight: 234234,
+            v: 1462,
+            sh: 360,
+            g: 352,
+            svet: [color1, color2, color3, color4, color5, color1, color2, color3],
+            sena: 6284
+        },
+        {
+            id: 5,
+            img: product1,
+            type: "product",
+            model: "Мелисса композиция 1",
+            voloume: 12,
+            sales_code: 34235234523,
+            weight: 234234,
+            v: 1462,
+            sh: 360,
+            g: 352,
+            svet: [color1, color2, color3, color4, color5, color1, color2, color3],
+            sena: 6284
+        },
+        {
+            id: 6,
+            img: product1,
+            type: "product",
+            model: "Мелисса композиция 1",
+            voloume: 12,
+            sales_code: 34235234523,
+            weight: 234234,
+            v: 1462,
+            sh: 360,
+            g: 352,
+            svet: [color1, color2, color3, color4, color5, color1, color2, color3],
+            sena: 6284
+        },
+        {
+            id: 7,
+            img: tovar1,
+            type: "tovar",
+            model: "АН-2801",
+            voloume: 24,
+            sales_code: 34235234523,
+            weight: 234234,
+            v: 4562,
+            sh: 678,
+            g: 7654,
+            svet: [color1, color2, color3, color4, color5, color1, color2, color3],
+            sena: 7348
+        },
+        {
+            id: 8,
+            img: tovar1,
+            type: "tovar",
+            model: "АН-2801",
+            voloume: 24,
+            sales_code: 34235234523,
+            weight: 234234,
+            v: 4562,
+            sh: 678,
+            g: 7654,
+            svet: [color1, color2, color3, color4, color5, color1, color2, color3],
+            sena: 7348
+        },
+        {
+            id: 9,
+            img: tovar1,
+            type: "tovar",
+            model: "АН-2801",
+            voloume: 24,
+            sales_code: 34235234523,
+            weight: 234234,
+            v: 4562,
+            sh: 678,
+            g: 7654,
+            svet: [color1, color2, color3, color4, color5, color1, color2, color3],
+            sena: 7348
+        },
+        {
+            id: 10,
+            img: tovar1,
+            type: "tovar",
+            model: "АН-2801",
+            voloume: 24,
+            sales_code: 34235234523,
+            weight: 234234,
+            v: 4562,
+            sh: 678,
+            g: 7654,
+            svet: [color1, color2, color3, color4, color5, color1, color2, color3],
+            sena: 7348
+        },
+        {
+            id: 11,
+            img: tovar1,
+            type: "tovar",
+            model: "АН-2801",
+            voloume: 24,
+            sales_code: 34235234523,
+            weight: 234234,
+            v: 4562,
+            sh: 678,
+            g: 7654,
+            svet: [color1, color2, color3, color4, color5, color1, color2, color3],
+            sena: 7348
+        },
+        {
+            id: 12,
+            img: tovar1,
+            type: "tovar",
+            model: "АН-2801",
+            voloume: 24,
+            sales_code: 34235234523,
+            weight: 234234,
+            v: 4562,
+            sh: 678,
+            g: 7654,
+            svet: [color1, color2, color3, color4, color5, color1, color2, color3],
+            sena: 7348
+        },
+        {
+            id: 13,
             img: tovar1,
             type: "tovar",
             model: "АН-2801",
@@ -158,9 +358,6 @@ export const api = {
 }
 
 
-// export const basket = [
-
-// ];
 
 // export const product = [
 //     {

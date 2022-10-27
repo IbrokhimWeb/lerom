@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import s from "./BasketCard.module.css";
 
 // Import React Icons
-import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
+import { VscTriangleDown, VscTriangleUp } from "react-icons/vsc";
 import { MdDeleteForever } from "react-icons/md";
 
 // import components 
 import Radio from "../radio/Radio";
 
 function BasketCard(props) {
-    const { id, img, model, v, sh, g, svet, sena, value } = props.data;
-    const [val, setVal] = useState(value);
-    // console.log(props.data);
+    const { id, img, model, v, sh, g, svet, sena } = props.data;
+    const [val, setVal] = useState(1);
+
     return (
         <>
             <section className={s.section}>
@@ -20,7 +20,7 @@ function BasketCard(props) {
                     <div className={s.model}>
                         <h1>{model}</h1>
                         <p>Pазмер: <span>{`в ${v} ш ${sh} г ${g} `}</span></p>
-                        <button onClick={() => { }} >
+                        <button onClick={() => {}} >
                             <MdDeleteForever /> Удалить
                         </button>
                     </div>
@@ -40,9 +40,9 @@ function BasketCard(props) {
                         <p>цена за 1 шт</p>
                     </div>
                     <div className={s.inc__dec}>
-                        <AiOutlineMinus className={s.inc__dec__icons} onClick={() => val > 1 ? setVal(val - 1) : setVal(val)} />
+                        <VscTriangleDown className={s.inc__dec__icons} onClick={() => val > 1 ? setVal(val - 1) : setVal(val)} />
                         <p> {val} </p>
-                        <AiOutlinePlus className={s.inc__dec__icons} onClick={() => setVal(val + 1)} />
+                        <VscTriangleUp className={s.inc__dec__icons} onClick={() => setVal(val + 1)} />
                     </div>
                     <h1>{sena * val} ₽</h1>
                 </div>

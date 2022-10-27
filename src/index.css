@@ -49,3 +49,9 @@ body{
         width: 1500px;
     }
 }
+
+@media (max-width: 379px) {
+    *{
+        display: none;
+    }
+}

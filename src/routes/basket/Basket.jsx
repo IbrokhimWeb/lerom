@@ -3,22 +3,23 @@ import { ApiContext } from '../../context/ApiContext';
 import { Link } from 'react-router-dom';
 import s from "./Basket.module.css";
 
+//  Import data
+import { savat } from "../../static/static";
 //  Import component
 import BasketCard from "../../components/basketCard/BasketCard";
 
 function Basket(props) {
-    const {api} = useContext(ApiContext);
-    // console.log(api);
-    // console.log(api?.basket);
+    const { api } = useContext(ApiContext);
+    console.log(api?.basket);
     return (
         <>
             <section className={s.section}>
                 <h1>Корзина</h1>  <br />
                 <hr />
                 {
-                    api?.basket?.map((e, i) => <BasketCard key={i} data={e} />)}
+                    savat?.map((e, i) => <BasketCard key={i} data={e} />)}
                 {
-                    api?.basket?.length ?
+                    savat.length ?
                         <>
                             <div className={s.submit}>
                                 <h1>Итого: <span> {' 434 658'} ₽</span></h1>

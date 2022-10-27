@@ -1,6 +1,6 @@
 .section {
-    width: 350px;
-    min-height: 470px;
+    width: 330px;
+    min-height: 430px;
     padding: 10px 0;
     text-align: center;
     transform: scale(1);
@@ -45,8 +45,8 @@
     justify-content: center;
 }
 
-.img__item {
-    width: 20px;
+.images > img{
+    width: 25px;
 }
 
 .section:hover .button {

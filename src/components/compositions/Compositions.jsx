@@ -41,6 +41,7 @@ function Compositions(props) {
                     <>
                         <div className={s.pages}>
                             <span className={s.marginL} />
+                            <span className={s.marginL} />
                             <span className={s.transform__revers} onClick={() => setPage(true)} />
                             <button className={s.button2} onClick={() => setPage(true)}>Технические характеристики</button>
                             <span className={s.transform__revers} onClick={() => setPage(true)} />

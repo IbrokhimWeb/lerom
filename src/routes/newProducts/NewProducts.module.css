@@ -56,3 +56,11 @@
 .right > p > span{
     font-weight: 700;
 }
+
+
+@media (max-width: 380px) {
+
+    .left{
+        display: none;
+    }
+}

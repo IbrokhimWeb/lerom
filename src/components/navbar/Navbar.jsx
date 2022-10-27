@@ -22,7 +22,7 @@ function Navbar(props) {
                             <option >Каталог 2</option>
                         </select>
                         <li>
-                            <Link className={s.Link} to="/">О нас</Link>
+                            <Link className={s.Link} to="/news">О нас</Link>
                         </li>
                         <li>
                             <Link className={s.Link} to="/">3D-моделирование</Link>

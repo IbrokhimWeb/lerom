@@ -10,7 +10,6 @@ import Tovar from '../tovar/Tovar';
 function Characteristics(props) {
     const api = useContext(ApiContext);
 
-console.log(api);
 
     const [page, setPage] = useState(true);
 
