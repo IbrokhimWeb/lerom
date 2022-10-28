@@ -1,3 +1,8 @@
+.main{
+    width: 100%;
+    position: relative;
+}
+
 .header {
     width: 100%;
     height: 120px;
@@ -94,7 +99,99 @@
     fill: var(--dark-blue);
 }
 
+.responsive__main{
+    display: none;
+}
+
 @media (max-width: 1050px) {
+    .responsive__main{
+        text-align: center;
+        top: 118px;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+        height: 1200vh;
+        display: block;
+        position: absolute;
+        background-color: rgba(32, 3, 129, 0.735);
+
+    }
+
+    .responsive__header{
+        gap: 50px;
+        display: flex;
+        height: 200vh;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #fff;
+        border-radius: 0 0 120px 120px ;
+    }
+
+    .worcking___time{
+        display: flex;
+        box-sizing: content-box;
+    }
+
+    .our___salons {
+        margin-top: 30px;
+        gap: 20px;
+        display: flex;
+        font-weight: 500;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .our___salons>a {
+        font-size: 3rem;
+        color: var(--dark-blue);
+        border-bottom: 2px solid var(--dark-blue);
+    }
+
+    .header___icons{
+        font-size: 3.5rem;
+        color: var(--dark-blue);
+    }
+
+    .headerPhone__icons{
+        font-size: 2.5rem;
+    }
+
+    .call__centers h4{
+        font-size: 3rem;
+        color: var(--brown);
+    }
+
+    .Link{
+        font-size: 3rem;
+        color: black;
+        font-weight: 600;
+    }
+
+    .responsive__header p{
+        font-size: 3rem;
+    }
+
+    .responsive__pages > ul{
+        gap: 30px;
+        display: flex;
+        flex-direction: column;
+    } 
+
+    .oddel{
+        color: var(--gray);
+    }
+
+    .ruscaya__call > p{
+        margin-left: 20px;
+        color: var(--gray);
+    }
+
+
+    .call__centers{
+        display: flex;
+    }
+
     .working__time,
     .contacts{
         display: none;
@@ -103,11 +200,4 @@
     .open__close{
         display: inline-block;
     }
-}
-
-
-
-
-@media (max-width: 480px) {
-
 }
