@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import { Routes, Route, Link, } from "react-router-dom";
+import { Routes, Route, Link, Navigate } from "react-router-dom";
 import axios from "axios";
 import s from "./App.module.css";
 
 // Import Static data
-import { api } from "./static/static"
+import { api } from "./static/static";
 
 // Import React icons
 import { FaCartPlus } from "react-icons/fa";
@@ -43,6 +43,7 @@ function App() {
                 <Header />
                 <Navbar />
                 <Routes>
+                    <Route path="*" element={<Navigate to="/" />} />
                     <Route path="/" element={<Home />} />
                     <Route path="/news" element={<About />} />
                     <Route path="/new" element={<NewProducts />} />
